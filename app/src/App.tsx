@@ -1,10 +1,13 @@
-import logo from '@/assets/Eletus Logo.jpg'
+import { Navbar } from "./components/navbar"
+
+// import {Outlet} from "@tanstack/react-router"
 function App() {
   
   return (
     <div>
       Home Page
-      <img src={logo} alt="" />
+      {/* <Outlet/> */}
+      <Navbar/>
     </div>
     
   )
