@@ -11,16 +11,17 @@ export default{
             },
 
             height: {
-            smLogo: '30px',
+            smLogo: '40px',
             lgLogo: '500px'
             },
 
             colors: {
             // General Colours
-            background: '#0E1218',
+            background: '#F5F1E8',
             backgroundPrimary: '#293040',
             backgroundSecondary: '#2B364D',
-
+            
+            leaf: '#1F8A78',
             cardPrimary: '#1F2432',
             cardSecondary: '#2B364D',
             cardPrimaryHover: '#3C4965',

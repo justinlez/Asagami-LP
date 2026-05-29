@@ -1,12 +1,16 @@
 import logo from "@/assets/eletus-logo.jpg";
+import { CTAButton, HeaderButton } from "./Button";
 
 export function Navbar() {
   return (
-    <div>
-      <img src={logo} alt="" className="h-10" />
-      <div className="bg-red-500 p-10 text-white">
-  Tailwind Test
-</div>
+    <div className="flex w-full items-center py-3 ">
+      <img src={logo} alt="" className="ms-6 inline h-smLogo bg-opacity-0 rounded" />
+      <div className="ml-auto mr-14 justify-end gap-3 flex">
+          <HeaderButton>Navigation</HeaderButton>
+          <HeaderButton>Features</HeaderButton>
+          <CTAButton>Contact Us</CTAButton>
+      </div>
+
     </div>
   );
 }

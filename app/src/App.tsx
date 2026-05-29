@@ -4,10 +4,9 @@ import { Navbar } from "./components/navbar"
 function App() {
   
   return (
-    <div>
-      Home Page
-      {/* <Outlet/> */}
+    <div className="bg-background h-screen w-screen">
       <Navbar/>
+      <hr className="border-gray-300"/>
     </div>
     
   )
