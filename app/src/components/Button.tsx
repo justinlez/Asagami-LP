@@ -1,17 +1,19 @@
-import type { ReactNode } from "react";
+import { cn } from "@/lib/utils";
 
-interface buttonProps {
-  children: ReactNode;
-}
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
 
-export function HeaderButton({ children }: buttonProps) {
+export function HeaderButton({ children, className, ...props }: ButtonProps) {
   return (
-    <button className="hover:bg-gray-200 h-10 px-3 rounded items-center flex-inline">{children}</button>
+    <button className={cn("hover:bg-gray-200 h-10 px-3 rounded", className)} {...props}>
+      {children}
+    </button>
   );
 }
 
-export function CTAButton({ children }: buttonProps) {
+export function CTAButton({ children, className, ...props }: ButtonProps) {
   return (
-    <button className="hover:bg-blue-200 bg-leaf h-10 flex-inline items-center px-3 rounded text-white">{children}</button>
+    <button className={cn("bg-leaf hover:bg-blue-200 h-10 px-3 rounded-3xl text-white", className)} {...props}>
+      {children}
+    </button>
   );
 }
