@@ -12,7 +12,7 @@ export function HeaderButton({ children, className, ...props }: ButtonProps) {
 
 export function CTAButton({ children, className, ...props }: ButtonProps) {
   return (
-    <button className={cn("bg-leaf hover:bg-blue-200 h-10 px-3 rounded-3xl text-white", className)} {...props}>
+    <button className={cn("bg-leaf hover:opacity-75 h-10 px-3 rounded-3xl text-white", className)} {...props}>
       {children}
     </button>
   );
