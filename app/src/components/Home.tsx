@@ -42,11 +42,13 @@ export function Home() {
           <div className="flex flex-row text-xl 2xl:text-5xl font-bold font-notojp items-center gap-2 pb-10">
             How Asagami AI Works
             <Info className="inline text-gray-800" ref={customRef} />
-            {hovering && (
-              <div className="relative bg-gray-300 p-2 font-normal font-sans rounded text-base">
-                Click on each feature to find out more
-              </div>
-            )}
+            <div className="flex items-center">
+              {hovering && (
+                <div className="absolute bg-gray-300 z-40 font-normal font-sans rounded text-base p-3">
+                  Click on each feature to find out more
+                </div>
+              )}
+            </div>
           </div>
           <div className="grid grid-cols-2 gap-8">
             <div className="flex flex-col">
