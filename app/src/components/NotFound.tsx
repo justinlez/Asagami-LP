@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { CTAButton } from "./ui/button";
-import { Navbar } from "./navbar";
+import { CTAButton } from "@/components/ui/button";
+import { Navbar } from "@/components/ui/navbar";
 
 export function NotFound(){
     return (
