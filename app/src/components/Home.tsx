@@ -1,78 +1,118 @@
 import homepg from "@/assets/homepage screen.svg";
 import { CTAButton } from "./ui/button";
-import { ArrowRightIcon, BookOpenCheck, Bot, ChartLine, Info, NotebookText } from "lucide-react";
+import {
+  ArrowRightIcon,
+  BookOpenCheck,
+  Bot,
+  ChartLine,
+  Info,
+  NotebookText,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 import { useHover } from "@/lib/utils";
 
 export function Home() {
   const { customRef, hovering } = useHover();
-  console.log(customRef, hovering);
+
   return (
-    <div>
-      <div className="flex flex-row min-h-[700px] pb-[150px]">
-        <div className="flex flex-col w-[600px] ps-20 my-auto">
-          <div className="flex text-4xl font-bold font-notojp">
+    <div className="flex flex-row w-[90%] mx-auto gap-[1%]">
+      {/* LEFT COLUMN — hero + features stacked */}
+      <div className="flex flex-col w-[40%]">
+        {/* Row 1 — Hero */}
+        <div className="flex flex-col min-h-[90vh] justify-center">
+          <div className="text-3xl 2xl:text-7xl font-bold font-notojp">
             Transform Knowledge Into Personalized Learning
           </div>
           <br />
-          <div className="flex font-space pb-6">
+          <div className="text-base 2xl:text-2xl font-space pb-6">
             Asagami converts notes, SOPs, videos, manuals, and teaching
             materials into structured learning, adaptive quizzes, AI-supported
             revision, and real-time learning insights.
           </div>
-          <div className="flex">
-              <Link to="/features">
-                <CTAButton className="flex items-center justify-center gap-1 ps-6">
-                  Discover Features <ArrowRightIcon className="inline" />
-                </CTAButton>
-              </Link>
+          <div>
+            <Link to="/features">
+              <CTAButton className="flex items-center justify-center gap-1 ps-6 text-base 2xl:text-2xl 2xl:py-[25px]">
+                Discover Features <ArrowRightIcon className="inline" />
+              </CTAButton>
+            </Link>
           </div>
         </div>
-        <div className="flex flex-col justify-center m-auto my-6 sticky ">
-          <img src={homepg} alt="" className="h-[450px] w-auto" />
+        {/* Row 2 — How Asagami Works */}
+        <div className="pb-20">
+          <div className="flex flex-row text-xl 2xl:text-5xl font-bold font-notojp items-center gap-2 pb-10">
+            How Asagami AI Works
+            <Info className="inline text-gray-800" ref={customRef} />
+            {hovering && (
+              <div className="relative bg-gray-300 p-2 font-normal font-sans rounded text-base">
+                Click on each feature to find out more
+              </div>
+            )}
+          </div>
+          <div className="grid grid-cols-2 gap-8">
+            <div className="flex flex-col">
+              <Link to="/features" className='hover:shadow-xs rounded-lg hover:shadow-[0_0_20px_rgba(0,0,0,0.25)] p-4'>
+                <NotebookText
+                  className="text-leaf"
+                  size={45}
+                  strokeWidth={1.5}
+                />
+                <p className="font-semibold font-notojp text-lg 2xl:text-3xl">
+                  Intelligent Note Creation
+                </p>
+                <p className="text-base 2xl:text-lg">
+                  Customise clear and organized notes from scratch or from
+                  existing materials
+                </p>
+              </Link>
+            </div>
+            <div className="flex flex-col">
+              <Link to="/features" className='hover:shadow-xs rounded-lg hover:shadow-[0_0_20px_rgba(0,0,0,0.25)] p-4'>
+                <BookOpenCheck
+                  className="text-leaf"
+                  size={45}
+                  strokeWidth={1.5}
+                />
+                <p className="font-semibold font-notojp text-lg 2xl:text-3xl">
+                  Personalized Quiz Design
+                </p>
+                <p className="text-base 2xl:text-lg">
+                  Automatically generate adaptive quizzes tailored to specific
+                  topics and learning goals.
+                </p>
+              </Link>
+            </div>
+            <div className="flex flex-col">
+              <Link to="/features" className='hover:shadow-xs rounded-lg hover:shadow-[0_0_20px_rgba(0,0,0,0.25)] p-4'>
+                <ChartLine className="text-leaf" size={45} strokeWidth={1.5} />
+                <p className="font-semibold font-notojp text-lg 2xl:text-3xl">
+                  Analytics
+                </p>
+                <p className="text-base 2xl:text-lg">
+                  Track learner progress, weak points, engagement, and
+                  performance in real time.
+                </p>
+              </Link>
+            </div>
+            <div className="flex flex-col">
+              <Link to="/features" className='hover:shadow-xs rounded-lg hover:shadow-[0_0_20px_rgba(0,0,0,0.25)] p-4' >
+                <Bot className="text-leaf" size={45} strokeWidth={1.5} />
+                <p className="font-semibold font-notojp text-lg 2xl:text-3xl">
+                  Chatbot
+                </p>
+                <p className="text-base 2xl:text-lg">
+                  Provide instant chatbot guidance and clarification whenever
+                  learners need help.
+                </p>
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
-      <div className="flex flex-row text-4xl font-bold font-notojp items-center gap-2 ps-20 pb-10">
-        How Asagami AI Works <Info className="inline text-gray-800" ref={customRef} />
-        {hovering && (
-        <div className="relative bg-gray-300 p-2 font-normal font-sans rounded text-base me-0">
-          Click on each feature to find out more
+      {/* RIGHT COLUMN — sticky image */}
+      <div className="flex flex-col w-auto mx-auto">
+        <div className="sticky top-40 flex justify-center">
+          <img src={homepg} alt="" className="h-[70vh] w-auto" />
         </div>
-      )}
-      </div>
-      
-      <div className="flex flex-row ps-20">
-        <div className="flex flex-col w-2/5">
-            <div className="flex flex-row gap-6">
-                <div className="flex flex-col">
-                    <NotebookText className="text-leaf" size={45} strokeWidth={1.5} />
-                    <p className="font-semibold font-notojp">Intelligent Note Creation</p>
-                    <p>Customise clear and organized notes from scratch or from existing materials</p>
-                </div>
-                <div className="flex flex-col">
-                    <BookOpenCheck className="text-leaf" size={45} strokeWidth={1.5}/>
-                    <p className="font-semibold font-notojp">Personalized Quiz Design</p>
-                    <p>Automatically generate adaptive quizzes tailored to specific topics and learning goals.</p>
-                </div>
-            </div>
-            <div className="flex flex-row gap-6">
-                <div className="flex flex-col">
-                    <ChartLine className="text-leaf" size={45} strokeWidth={1.5}/>
-                    <p className="font-semibold font-notojp">Analytics</p>
-                    <p>Track learner progress, weak points, engagement, and performance in real time.</p>
-                </div>
-                <div className="flex flex-col">
-                    <Bot className="text-leaf" size={45} strokeWidth={1.5}/>
-                    <p className="font-semibold font-notojp">Chatbot</p>
-                    <p>
-                        Provide instant chatbot guidance and clarification whenever learners need help.
-                    </p>
-                </div>
-            </div>
-        </div>
-        {/* <div className="flex flex-col m-auto my-6">
-            <img src={homepg} alt="" className="h-[450px] w-auto"/>
-        </div> */}
       </div>
     </div>
   );
