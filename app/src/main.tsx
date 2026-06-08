@@ -8,7 +8,7 @@ import "@fontsource/noto-sans-jp";
 import { Home } from "@/components/Home";
 import { NotFound } from "@/components/NotFound";
 import { AboutAsagami } from "@/components/AboutAsagami";
-import { Features } from "@/components/features";
+import { Features } from "@/components/Features";
 
 const router = createBrowserRouter([
   {
