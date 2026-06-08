@@ -25,3 +25,11 @@ export function FeatureButton ({children,className, ...props}:ButtonProps){
     </button>
   )
 }
+
+export function LeafButton ({children,className, ...props}:ButtonProps){
+  return (
+    <button className={cn("bg-leaf text-white rounded-full h-fit w-fit px-3 py-1", className)} {...props}>
+      {children}
+    </button>
+  )
+}
