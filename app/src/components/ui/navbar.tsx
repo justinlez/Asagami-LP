@@ -8,7 +8,7 @@ export function Navbar() {
   const [isSettingsExpanded, setSettingsExpanded] = useState(false);
   return (
     <div className="flex w-full py-3 min-h-[8vh] px-20 items-center">
-      <Link to="/home">
+      <Link to="/">
         <HeaderButton className="text-left flex items-center hover:bg-background">
           <img
             src={logo}

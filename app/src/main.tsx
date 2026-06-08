@@ -13,19 +13,22 @@ import { Features } from "@/components/features";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: [<App/>],
-    children: [{ path: "/home", element: <Home /> }],
+    element: <App />,
     errorElement: <NotFound />,
-  },
-  {
-    path: "/aboutasagami",
-    element: <App/>,
-    children: [{path:'/aboutasagami',element:<AboutAsagami/>}]
-  },
-  {
-    path: "/features",
-    element: <App/>,
-    children: [{path:'/features', element:<Features/>}]
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: "aboutasagami",
+        element: <AboutAsagami />,
+      },
+      {
+        path: "features",
+        element: <Features />,
+      },
+    ],
   },
 ]);
 createRoot(document.getElementById("root")!).render(
