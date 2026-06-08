@@ -1,5 +1,6 @@
 import { HomeMain } from "@/components/homeContent/homeMain"
 import { GlobalOutreach } from "@/components/homeContent/globalOutreach";
+import { Footer } from "@/components/ui/footer";
 
 export function Home() {
   
@@ -14,7 +15,7 @@ export function Home() {
         <GlobalOutreach/>
       </div>
       <div>
-        
+        <Footer/>
       </div>
     </div>
   );

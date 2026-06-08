@@ -39,35 +39,38 @@ export function GlobalOutreach() {
         style={{ backgroundImage: `url(${MapBackground})` }}
         className="flex flex-col items-center justify-center bg-cover bg-center bg-no-repeat h-[70vh] mb-[10vh]"
       >
-        <div className="flex flex-row gap-[3%] justify-center w-3/4">
+        <div className="flex flex-row gap-x-[3%] justify-center w-3/4">
           {countries.map((country) => (
-            <div className="" key={country.name}>
+            <div className="relative" key={country.name}>
               <img
                 src={country.flag}
                 alt={country.name}
-                className={`h-[20vh] block ${hoveredCountry === country.name ? "scale-120" : "scale-100"}`}
+                className={`h-[20vh] block ${hoveredCountry === country.name ? "scale-125" : "scale-100"}`}
                 onMouseEnter={() => setHoveredCountry(country.name)}
                 onMouseLeave={() => setHoveredCountry(null)}
               />
-              {hoveredCountry === country.name && (
-                <p className="text-center block text-xl font-notojp">
-                  {country.name}
-                </p>
-              )}
+
+              <div
+                className={`absolute w-full text-xl py-[12%] font-notojp ${hoveredCountry != country.name ? "hidden" : ""}`}
+              >
+                <p className="flex justify-center items-center">{country.name}</p>
+              </div>
             </div>
           ))}
         </div>
-        <div className="flex flex-row pt-[5vh] font-notojp text-md 2xl:text-xl">
+        <div className="flex flex-row pt-[10vh] font-notojp text-md text-xl 2xl:text-3xl">
           Available in 14 languages!
         </div>
       </div>
 
       <div className="flex flex-col items-center min-h-[30vh] gap-[2vh]">
-        <div className="flex flex-row 2xl:text-3xl font-bold font-space">We have worked with</div>
+        <div className="flex flex-row text-xl 2xl:text-3xl font-bold font-space">
+          We have worked with
+        </div>
         <div className="flex flex-row gap-[5%] justify-center">
-            {companies.map((company)=>(
-                <img src={company.logo} alt="" />
-            ))}
+          {companies.map((company) => (
+            <img src={company.logo} alt="" />
+          ))}
         </div>
       </div>
     </div>
