@@ -21,7 +21,7 @@ export function CTAButton({ children, className, ...props }: ButtonProps) {
 
 export function FeatureButton ({children,className, ...props}:ButtonProps){
   return (
-    <button className={cn(" hover:bg-leaf hover:text-white border-2 drop-shadow-lg border-leaf font-semibold text-leaf h-10 px-[5%] rounded-3xl h-12   ", className)} {...props}>
+    <button className={cn(" hover:bg-leaf hover:text-white border-2 drop-shadow-lg border-leaf font-semibold text-leaf text-sm 2xl:text-lg px-[3%] h-10 2xl:h-12 2xl:px-[5%] rounded-3xl ", className)} {...props}>
       {children}
     </button>
   )

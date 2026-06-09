@@ -34,8 +34,8 @@ export function Features() {
           ))}
         </div>
       </div>
-      <div className="flex flex-wrap justify-center min-h-[60vh pb-[12vh]">
-        <div className="flex flex-col items-center w-full 2xl:w-1/2 gap-[6%] my-[3%]">
+      <div className="flex flex-wrap justify-center min-h-[60vh]items-start pb-[12vh]">
+        <div className="flex flex-col items-center w-full 2xl:w-1/2 gap-[2vh] my-[3%] h-auto">
           {chosenFeature.steps.map((step, index) => (
             <FeaturesCard
               className="flex flex-row gap-2"
@@ -50,12 +50,11 @@ export function Features() {
         </div>
         <div className="flex flex-col w-full 2xl:w-1/2 justify-start items-center my-[3%]">
           {extension == "jpg" ? (
-            <img src={chosenFeature.gif[chosenStep]} alt="" />
+            <img src={chosenFeature.gif[chosenStep]} alt="" className="h-3/4 2xl:h-auto"/>
           ) : (
             <video
               width="600"
               autoPlay
-              controls
               loop
               muted
               key={chosenFeature.gif[chosenStep]}

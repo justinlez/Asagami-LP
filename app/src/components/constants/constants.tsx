@@ -8,8 +8,10 @@ import INCAni3 from "@/assets/featureVideos/INCAni3.mp4";
 import LearningAnalytics1 from "@/assets/featureVideos/LearningAnalytics1.jpg";
 import LearningAnalytics2 from "@/assets/featureVideos/LearningAnalytics2.jpg";
 import LearningAnalytics3 from "@/assets/featureVideos/LearningAnalytics3.jpg";
+import CurricPlanning from "@/assets/featureVideos/CurricPlanning.mp4";
 import Chatbot1 from "@/assets/featureVideos/Chatbot1.mp4";
 import AdminPanel1 from "@/assets/featureVideos/AdminPanel1.jpg";
+import AdminPanel2 from "@/assets/featureVideos/AdminPanel2.mp4";
 import usa from "@/assets/countries/unitedstates.svg";
 import japan from "@/assets/countries/japan.svg";
 import philippines from "@/assets/countries/philippines.svg";
@@ -65,7 +67,7 @@ export const FEATURES = [
       "Share notes, quizzes, and curriculum materials seamlessly across teams",
       "Track engagement, completion rates, performance trends, and weak areas through real-time learning analytics",
     ],
-    gif: [AdminPanel1],
+    gif: [AdminPanel1,AdminPanel2],
   },
   {
     name: "Curriculum Planning",
@@ -73,7 +75,7 @@ export const FEATURES = [
       "Create custom or automatically generated curriculum structures for any topic, course, or training objective",
       "Organize, refine, and sequence topics based on your preferred learning flow, depth, and timeline",
     ],
-    gif: [],
+    gif: [CurricPlanning],
   },
 ];
 
