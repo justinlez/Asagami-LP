@@ -10,7 +10,7 @@ export function Footer(){
                 <div className="flex items-center gap-1"><Copyright className="flex-inline items-center" size={20}/> Eletus Inc.</div>
                 <div className="flex gap-12 w-auto">
                     <Link to='https://www.eletus.co.jp/privacy-policy-2/' target="_blank" className='hover:text-leaf'>Privacy Policy</Link>
-                    <Link to='https://www.eletus.co.jp/act-on-specified-commercial-transactions/' target="_blank" className='hover:text-leaf'>Disclosure based on the Specified Commercial Transactions Act</Link>
+                    <Link to='https://www.eletus.co.jp/act-on-specified-commercial-transactions/' target="_blank" className='hover:text-leaf'>Notation based on the Act on Specified Commercial Transactions</Link>
                 </div>
             </div>
         </div>

@@ -5,6 +5,11 @@ import PQDAni4 from "@/assets/featureVideos/PQDAni4.mp4";
 import INCAni1 from "@/assets/featureVideos/INCAni1.jpg";
 import INCAni2 from "@/assets/featureVideos/INCAni2.jpg";
 import INCAni3 from "@/assets/featureVideos/INCAni3.mp4";
+import LearningAnalytics1 from "@/assets/featureVideos/LearningAnalytics1.jpg";
+import LearningAnalytics2 from "@/assets/featureVideos/LearningAnalytics2.jpg";
+import LearningAnalytics3 from "@/assets/featureVideos/LearningAnalytics3.jpg";
+import Chatbot1 from "@/assets/featureVideos/Chatbot1.mp4";
+import AdminPanel1 from "@/assets/featureVideos/AdminPanel1.jpg";
 import usa from "@/assets/countries/unitedstates.svg";
 import japan from "@/assets/countries/japan.svg";
 import philippines from "@/assets/countries/philippines.svg";
@@ -43,7 +48,7 @@ export const FEATURES = [
       "Track rankings, engagement, and overall learning progress within your class or organization.",
       "Monitor study consistency through learning streaks, revision activity, time spent across notes and quiz attempts.",
     ],
-    gif: [],
+    gif: [ LearningAnalytics1, LearningAnalytics2, LearningAnalytics3 ],
   },
   {
     name: "24/7 Assistance",
@@ -51,7 +56,7 @@ export const FEATURES = [
       "Access instant AI-supported assistance anytime to clarify concepts, resolve doubts, and support independent learning",
       "Get step-by-step support for solving questions, understanding mistakes, and reinforcing difficult concepts",
     ],
-    gif: [],
+    gif: [Chatbot1, Chatbot1],
   },
   {
     name: "Admin Panel",
@@ -60,7 +65,7 @@ export const FEATURES = [
       "Share notes, quizzes, and curriculum materials seamlessly across teams",
       "Track engagement, completion rates, performance trends, and weak areas through real-time learning analytics",
     ],
-    gif: [],
+    gif: [AdminPanel1],
   },
   {
     name: "Curriculum Planning",

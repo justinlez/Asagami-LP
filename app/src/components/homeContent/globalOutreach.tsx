@@ -47,11 +47,12 @@ export function GlobalOutreach() {
         <div className="flex flex-row text-xl 2xl:text-3xl font-bold font-space">
           We have worked with
         </div>
-        <div className="flex flex-row gap-[5%] justify-center">
+        <div className="flex flex-row gap-[5%] max-w-screen justify-center">
           {companies.map((company) => (
-            <img src={company.logo} alt="" key={company.name} />
+            <img src={company.logo} alt="" key={company.name} className="w-[20%]"/>
           ))}
         </div>
+        <div className=""></div>
       </div>
     </div>
   );
