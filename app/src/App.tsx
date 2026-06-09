@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { Navbar } from "@/components/ui/navbar";
+import { Footer } from "@/components/ui/footer";
 
 function App() {
   
@@ -8,6 +9,7 @@ function App() {
       <Navbar />
       <hr className="border-gray-300" />
       <Outlet />
+      <Footer/>
     </div>
   );
 }
