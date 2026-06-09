@@ -1,13 +1,18 @@
-import { FeatureButton, LeafButton } from "@/components/ui/button";
+import {
+  FeatureButton,
+  FeaturesCard,
+  LeafCircle,
+} from "@/components/ui/button";
 import { useState } from "react";
 
-import { FeaturesCard } from "./ui/featuresCard";
 import { FEATURES } from "@/components/constants/constants";
-import PQDGIF from "@/assets/PQDAni.mp4";
 
 export function Features() {
   const features = FEATURES;
   const [chosenFeature, setChosenFeature] = useState(features[0]);
+  const [chosenStep, setChosenStep] = useState(0);
+
+  const extension = chosenFeature.gif[chosenStep].split(".").pop();
 
   return (
     <div className="min-h-[70vh] w-[90vw] mx-auto">
@@ -29,20 +34,39 @@ export function Features() {
           ))}
         </div>
       </div>
-      <div className="flex flex-wrap justify-center min-h-[60vh]">
+      <div className="flex flex-wrap justify-center min-h-[60vh pb-[12vh]">
         <div className="flex flex-col items-center w-full 2xl:w-1/2 gap-[6%] my-[3%]">
           {chosenFeature.steps.map((step, index) => (
-            <FeaturesCard className="flex flex-row gap-2">
-              <LeafButton>{index + 1}</LeafButton> <p>{step}</p>
+            <FeaturesCard
+              className="flex flex-row gap-2"
+              key={chosenFeature.name + " " + index}
+              onClick={() => {
+                setChosenStep(index);
+              }}
+            >
+              <LeafCircle>{index + 1}</LeafCircle> <p>{step}</p>
             </FeaturesCard>
           ))}
         </div>
         <div className="flex flex-col w-full 2xl:w-1/2 justify-start items-center my-[3%]">
-          <video width="600" autoPlay loop muted >
-            <source src={PQDGIF} type="video/mp4" />
-          </video>
+          {extension == "jpg" ? (
+            <img src={chosenFeature.gif[chosenStep]} alt="" />
+          ) : (
+            <video
+              width="600"
+              autoPlay
+              controls
+              loop
+              muted
+              key={chosenFeature.gif[chosenStep]}
+            >
+              <source src={chosenFeature.gif[chosenStep]} type="video/mp4" />
+            </video>
+          )}
         </div>
+        
       </div>
+      <br /><br /><br />
     </div>
   );
 }

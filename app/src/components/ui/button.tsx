@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
+interface FeaturesCardProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 export function HeaderButton({ children, className, ...props }: ButtonProps) {
   return (
@@ -26,10 +27,18 @@ export function FeatureButton ({children,className, ...props}:ButtonProps){
   )
 }
 
-export function LeafButton ({children,className, ...props}:ButtonProps){
+export function FeaturesCard({className, children, ...props}:ButtonProps){
+    return (
+        <button className={cn("flex text-start rounded-xl drop-shadow-lg w-5/6 p-[3%] bg-white ",className)} {...props}>
+            {children}
+        </button>
+    )
+}
+
+export function LeafCircle ({children,className, ...props}:FeaturesCardProps){
   return (
-    <button className={cn("bg-leaf text-white rounded-full h-fit w-fit px-3 py-1", className)} {...props}>
+    <div className={cn("bg-leaf text-white rounded-full h-fit w-fit px-3 py-1", className)} {...props}>
       {children}
-    </button>
+    </div>
   )
 }
