@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 export function Navbar() {
   const [isSettingsExpanded, setSettingsExpanded] = useState(false);
+  const [isAboutExpanded, setAboutExpanded] = useState(false);
   return (
     <div className="flex w-full py-3 min-h-[8vh] px-20 items-center">
       <Link to="/">
@@ -28,12 +29,34 @@ export function Navbar() {
         <Link to="/features">
           <HeaderButton>Features</HeaderButton>
         </Link>
-        <Link to="/aboutasagami">
+        {/* <Link to="/aboutasagami">
           <HeaderButton>About Asagami</HeaderButton>
-        </Link>
-        <div className="relative">
+        </Link> */}
+        <div className="flex relative">
           <HeaderButton
-            className="flex items-center"
+            onClick={()=>setAboutExpanded(!isAboutExpanded)}>
+            About Us
+            {isAboutExpanded ? (
+              <ChevronUp className="ms-1" size={15} />
+            ) : (
+              <ChevronDown className="ms-1" size={15} />
+            )}
+          </HeaderButton>
+          {isAboutExpanded && (
+            <div className="absolute flex justify-center border top-full right-0 bg-white bg-opacity-90 rounded-xl p-3 mt-1 ">
+              <ul className="whitespace-nowrap">
+                <Link to="">
+                  <li> - Main </li>
+                </Link>
+                <Link to="https://www.eletus.co.jp/philosophy/" target="_blank">
+                  <li> - Eletus </li>
+                </Link>
+              </ul>
+            </div>
+          )}
+        </div>
+        <div className="flex relative">
+          <HeaderButton
             onClick={() => setSettingsExpanded(!isSettingsExpanded)}
           >
             Settings
@@ -45,7 +68,7 @@ export function Navbar() {
           </HeaderButton>
 
           {isSettingsExpanded && (
-            <div className="absolute flex justify-center border min-w-full bg-white rounded pt-2 pb-3 px-4">
+            <div className="absolute flex justify-center border top-full right-0 bg-white bg-opacity-90 rounded-xl p-3 mt-1 ">
               <ul className="whitespace-nowrap">
                 <Link
                   to="/"
@@ -63,6 +86,7 @@ export function Navbar() {
             </div>
           )}
         </div>
+        <div></div>
         <CTAButton>
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSfjsScFSVHqQLvXsUbW_J84qFjJsA8cUXuR1t0g6iKcaVAu7w/viewform"
@@ -71,7 +95,6 @@ export function Navbar() {
             Contact Us
           </a>
         </CTAButton>
-        <div className=""></div>
       </div>
     </div>
   );

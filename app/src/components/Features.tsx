@@ -16,7 +16,7 @@ export function Features() {
 
   return (
     <div className="min-h-[70vh] w-[90vw] mx-auto">
-      <div className="flex justify-center items-center h-[20vh] 2xl:text-6xl text-4xl font-notojp">
+      <div className="flex justify-center items-center h-[20vh] 2xl:text-5xl text-4xl font-notojp">
         Key Features
       </div>
       <div className="flex justify-center items-center min-h-[15vh] ">
@@ -53,7 +53,7 @@ export function Features() {
             <img src={chosenFeature.gif[chosenStep]} alt="" className="h-3/4 2xl:h-auto"/>
           ) : (
             <video
-              width="600"
+              width="700"
               autoPlay
               loop
               muted
