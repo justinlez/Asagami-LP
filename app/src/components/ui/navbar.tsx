@@ -45,10 +45,10 @@ export function Navbar() {
           {isAboutExpanded && (
             <div className="absolute flex justify-center border top-full right-0 bg-white bg-opacity-90 rounded-xl p-3 mt-1 ">
               <ul className="whitespace-nowrap">
-                <Link to="">
+                <Link to="/aboutasagami" onClick={()=>setAboutExpanded(!isAboutExpanded)}>
                   <li> - Main </li>
                 </Link>
-                <Link to="https://www.eletus.co.jp/philosophy/" target="_blank">
+                <Link to="https://www.eletus.co.jp/philosophy/" target="_blank"  onClick={()=>setAboutExpanded(!isAboutExpanded)}>
                   <li> - Eletus </li>
                 </Link>
               </ul>
