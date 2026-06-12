@@ -1,55 +1,64 @@
 /** @type {import('tailwindcss').Config} */
 
-export default{
-    content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
-    theme: {
-        extend: {
-            fontFamily: {
-                space: ['Space Grotesk', 'sans-serif'],
-                notojp: ['Noto Sans JP', 'sans-serif']
-            },
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {
+      fontFamily: {
+        space: ["Space Grotesk", "sans-serif"],
+        notojp: ["Noto Sans JP", "sans-serif"],
+      },
 
-            borderRadius: {
-                lg: '10px',
-                md: '5px',
-                sm: 'calc(var(--radius) - 4px)',
-            },
+      borderRadius: {
+        lg: "10px",
+        md: "5px",
+        sm: "calc(var(--radius) - 4px)",
+      },
 
-            height: {
-                smLogo: '40px',
-                lgLogo: '500px'
-            },
+      height: {
+        smLogo: "40px",
+        lgLogo: "500px",
+      },
 
-            colors: {
-                // General Colours
-                background: '#F5F1E8',
-                backgroundPrimary: '#293040',
-                backgroundSecondary: '#2B364D',
-                
-                leaf: '#1F8A78',
-                cardPrimary: '#1F2432',
-                cardSecondary: '#2B364D',
-                cardPrimaryHover: '#3C4965',
+      colors: {
+        // General Colours
+        background: "#F5F1E8",
+        backgroundPrimary: "#293040",
+        backgroundSecondary: "#2B364D",
 
-                // Item specific
-                sidebarPrimary: '#2B364D',
-                sidebarSecondary: '#1F2432',
-                sidebarButtonHover: '#555D6F',
-                sidebarRowHover: '#46566E',
-                sidebarActive: '#61DBFB',
+        leaf: "#1F8A78",
+        cardPrimary: "#1F2432",
+        cardSecondary: "#2B364D",
+        cardPrimaryHover: "#3C4965",
 
-            },
-
-            animation: {
-                'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
-                'rotate-anticlockwise':
-                'spin-anticlockwise 1.4s 0.25s ease-out forwards',
-                rotate: 'rotate 2s linear infinite',
-            },
-            
-        //   plugins: [require('tailwindcss-animate'), require('@tailwindcss/typography')],
+        // Item specific
+        sidebarPrimary: "#2B364D",
+        sidebarSecondary: "#1F2432",
+        sidebarButtonHover: "#555D6F",
+        sidebarRowHover: "#46566E",
+        sidebarActive: "#61DBFB",
+      },
+      keyframes: {
+        slideUp: {
+          "0%": { opacity: "0", transform: "translateY(40px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
         },
+        slideInRight: {
+          '0%': {
+            opacity: '0',
+            transform: 'translateX(180px)',
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateX(0)',
+          },
+        },
+      },
+      animation: {
+        slideUp: "slideUp 0.8s ease-out forwards",
+        slideInRight: "slideInRight 0.8s ease-out forwards"
+      },
+
     },
-}
-
-
+  },
+};

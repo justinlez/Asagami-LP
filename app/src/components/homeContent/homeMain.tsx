@@ -1,13 +1,26 @@
 import { Link } from "react-router-dom";
 import { CTAButton } from "@/components/ui/button";
-import { ArrowRightIcon, BookOpenCheck, Bot, ChartLine, Info, NotebookText } from "lucide-react";
-import homepg from '@/assets/homepage screen.svg'
+import {
+  ArrowRightIcon,
+  BookOpenCheck,
+  Bot,
+  ChartLine,
+  Info,
+  NotebookText,
+} from "lucide-react";
+import homepg from "@/assets/homepage screen.svg";
 import { useHover } from "@/lib/utils";
+import AboutUsBg from "@/assets/AboutUsBg.jpg";
 
-export function HomeMain(){
-    const { customRef, hovering } = useHover();
-    return(
-        <div className="flex flex-row w-[90vw] mx-auto gap-[1%]">
+export function HomeMain() {
+  const { customRef, hovering } = useHover();
+
+  return (
+    <div className="bg-contain bg-no-repeat" style={{ backgroundImage: `url(${AboutUsBg})` }}>
+      <div
+        className="flex flex-row w-[90vw] mx-auto gap-[1%]"
+        
+      >
         <div className="flex flex-col w-[40%]">
           <div className="flex flex-col min-h-[90vh] justify-center">
             <div className="text-4xl 2xl:text-7xl font-bold font-notojp">
@@ -27,7 +40,7 @@ export function HomeMain(){
               </Link>
             </div>
           </div>
-          <div className="mb-[15%]">
+          <div className="mb-[15%] mt-[30%]">
             <div className="flex flex-row text-3xl 2xl:text-5xl font-bold font-notojp items-center gap-2 pb-10">
               How Asagami AI Works
               <Info className="inline text-gray-800" ref={customRef} />
@@ -41,7 +54,10 @@ export function HomeMain(){
             </div>
             <div className="grid grid-cols-2 gap-x-[2%] gap-y-[6%]">
               <div className="flex flex-col">
-                <Link to="/features" className='hover:shadow-xs rounded-lg hover:shadow-[0_0_20px_rgba(0,0,0,0.25)] p-[1%]'>
+                <Link
+                  to="/features"
+                  className="hover:shadow-xs rounded-lg hover:shadow-[0_0_20px_rgba(0,0,0,0.25)] p-[1%]"
+                >
                   <NotebookText
                     className="text-leaf"
                     size={45}
@@ -57,7 +73,10 @@ export function HomeMain(){
                 </Link>
               </div>
               <div className="flex flex-col">
-                <Link to="/features" className='hover:shadow-xs rounded-lg hover:shadow-[0_0_20px_rgba(0,0,0,0.25)] p-[1%]'>
+                <Link
+                  to="/features"
+                  className="hover:shadow-xs rounded-lg hover:shadow-[0_0_20px_rgba(0,0,0,0.25)] p-[1%]"
+                >
                   <BookOpenCheck
                     className="text-leaf"
                     size={45}
@@ -73,7 +92,10 @@ export function HomeMain(){
                 </Link>
               </div>
               <div className="flex flex-col">
-                <Link to="/features" className='hover:shadow-xs rounded-lg hover:shadow-[0_0_20px_rgba(0,0,0,0.25)] p-[1%]'>
+                <Link
+                  to="/features"
+                  className="hover:shadow-xs rounded-lg hover:shadow-[0_0_20px_rgba(0,0,0,0.25)] p-[1%]"
+                >
                   <ChartLine className="text-leaf" size={45} strokeWidth={1.5} />
                   <p className="font-semibold font-notojp text-xl 2xl:text-3xl py-[3%]">
                     Analytics
@@ -85,7 +107,10 @@ export function HomeMain(){
                 </Link>
               </div>
               <div className="flex flex-col">
-                <Link to="/features" className='hover:shadow-xs rounded-lg hover:shadow-[0_0_20px_rgba(0,0,0,0.25)] p-[1%]' >
+                <Link
+                  to="/features"
+                  className="hover:shadow-xs rounded-lg hover:shadow-[0_0_20px_rgba(0,0,0,0.25)] p-[1%]"
+                >
                   <Bot className="text-leaf" size={45} strokeWidth={1.5} />
                   <p className="font-semibold font-notojp text-xl 2xl:text-3xl py-[3%]">
                     Chatbot
@@ -106,5 +131,6 @@ export function HomeMain(){
           </div>
         </div>
       </div>
-    )
+    </div>
+  );
 }
