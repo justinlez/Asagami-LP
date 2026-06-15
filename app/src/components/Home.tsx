@@ -8,7 +8,7 @@ export function Home() {
     <div>
       <HomeMain/>
       <br />
-      <div>
+      <div className="mt-[3%] border-t-2 border-gray-200">
         <GlobalOutreach/>
       </div>
     </div>

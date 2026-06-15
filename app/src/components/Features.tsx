@@ -6,6 +6,7 @@ import {
 import { useState } from "react";
 
 import { FEATURES } from "@/components/constants/constants";
+import AboutUsBg2  from "@/assets/AboutUsBg2.jpg";
 
 export function Features() {
   const features = FEATURES;
@@ -15,7 +16,7 @@ export function Features() {
   const extension = chosenFeature.gif[chosenStep].split(".").pop();
 
   return (
-    <div className="min-h-[70vh] w-[90vw] mx-auto">
+    <div className="min-h-[70vh] w-[90vw] mx-auto bg-contain" style={{backgroundImage:`url(${AboutUsBg2})`}}>
       <div className="flex justify-center items-center h-[20vh] 2xl:text-5xl text-4xl font-notojp">
         Key Features
       </div>

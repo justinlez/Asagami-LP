@@ -9,7 +9,7 @@ export function GlobalOutreach() {
   const companies = COMPANIES;
 
   return (
-    <div className="h-auto w-full bg-background">
+    <div className="h-auto w-full bg-background ">
       <div className="text-gray-600 text-4xl 2xl:text-6xl font-bold text-center py-[3%]">
         Our Global Outreach
       </div>
@@ -43,7 +43,7 @@ export function GlobalOutreach() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center min-h-[30vh] gap-[2vh]">
+      <div className="flex flex-col items-center min-h-[30vh] gap-[2vh] mt-[10%]">
         <div className="flex flex-row text-xl 2xl:text-3xl font-bold font-space">
           We have worked with
         </div>
@@ -52,7 +52,6 @@ export function GlobalOutreach() {
             <img src={company.logo} alt="" key={company.name} className="w-[20%]"/>
           ))}
         </div>
-        <div className=""></div>
       </div>
     </div>
   );
