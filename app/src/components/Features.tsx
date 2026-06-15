@@ -3,44 +3,58 @@ import {
   FeaturesCard,
   LeafCircle,
 } from "@/components/ui/button";
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 import { FEATURES } from "@/components/constants/constants";
-import AboutUsBg2  from "@/assets/AboutUsBg2.jpg";
+import AboutUsBg2 from "@/assets/AboutUsBg2.jpg";
+import { useNavigate, useParams } from "react-router-dom";
 
 export function Features() {
-  const features = FEATURES;
-  const [chosenFeature, setChosenFeature] = useState(features[0]);
-  const [chosenStep, setChosenStep] = useState(0);
+  const featurePath = useParams().featureName;
+  const feature = FEATURES[featurePath];
 
-  const extension = chosenFeature.gif[chosenStep].split(".").pop();
+  const [chosenStep, setChosenStep] = useState(0);
+  const navigate = useNavigate();
+
+  const extension = feature.gif[chosenStep].split(".").pop();
+
+  const featuresArray = useMemo(() => Object.entries(FEATURES), []);
+
+  useEffect(() => {
+    setChosenStep(0)
+  }, [featurePath]);
+  console.log(chosenStep)
 
   return (
-    <div className="min-h-[70vh] w-[90vw] mx-auto bg-contain" style={{backgroundImage:`url(${AboutUsBg2})`}}>
+    <div
+      className="min-h-[70vh] w-[90vw] mx-auto bg-contain"
+      style={{ backgroundImage: `url(${AboutUsBg2})` }}
+    >
       <div className="flex justify-center items-center h-[20vh] 2xl:text-5xl text-4xl font-notojp">
         Key Features
       </div>
       <div className="flex justify-center items-center min-h-[15vh] ">
         <div className="flex flex-wrap justify-center">
-          {features.map((feature) => (
+          {featuresArray.map((featureObj) => (
             <FeatureButton
-              key={feature.name}
+              key={featureObj[0]}
               onClick={() => {
-                setChosenFeature(feature);
+                navigate("/features/" + featureObj[1].path);
+                setChosenStep(0);
               }}
-              className={`m-2 ${chosenFeature.name == feature.name ? "bg-leaf text-white" : ""}`}
+              className={`m-2 ${featurePath == featureObj[1].path ? "bg-leaf text-white" : ""}`}
             >
-              {feature.name}
+              {featureObj[1].name}
             </FeatureButton>
           ))}
         </div>
       </div>
       <div className="flex flex-wrap justify-center min-h-[60vh]items-start pb-[12vh]">
         <div className="flex flex-col items-center w-full 2xl:w-1/2 gap-[2vh] my-[3%] h-auto">
-          {chosenFeature.steps.map((step, index) => (
+          {feature.steps.map((step, index) => (
             <FeaturesCard
               className="flex flex-row gap-2"
-              key={chosenFeature.name + " " + index}
+              key={featurePath + " " + index}
               onClick={() => {
                 setChosenStep(index);
               }}
@@ -51,22 +65,27 @@ export function Features() {
         </div>
         <div className="flex flex-col w-full 2xl:w-1/2 justify-start items-center my-[3%]">
           {extension == "jpg" ? (
-            <img src={chosenFeature.gif[chosenStep]} alt="" className="h-3/4 2xl:h-auto"/>
+            <img
+              src={feature.gif[chosenStep]}
+              alt=""
+              className="h-3/4 2xl:h-auto"
+            />
           ) : (
             <video
               width="700"
               autoPlay
               loop
               muted
-              key={chosenFeature.gif[chosenStep]}
+              key={feature.gif[chosenStep]}
             >
-              <source src={chosenFeature.gif[chosenStep]} type="video/mp4" />
+              <source src={feature.gif[chosenStep]} type="video/mp4" />
             </video>
           )}
         </div>
-        
       </div>
-      <br /><br /><br />
+      <br />
+      <br />
+      <br />
     </div>
   );
 }

@@ -11,7 +11,6 @@ import {
 import homepg from "@/assets/homepage screen.svg";
 import { useHover } from "@/lib/utils";
 import AboutUsBg from "@/assets/AboutUsBg.jpg";
-import AboutUsBg2 from "@/assets/AboutUsBg2.jpg";
 
 export function HomeMain() {
   const { customRef, hovering } = useHover();
@@ -22,7 +21,7 @@ export function HomeMain() {
         className="flex flex-row w-[90vw] mx-auto gap-[1%]"
         
       >
-        <div className="flex flex-col w-[40%]">
+        <div className="flex flex-col w-[40%] animate-slideUp">
           <div className="flex flex-col min-h-[90vh] justify-center">
             <div className="text-4xl 2xl:text-7xl font-bold font-notojp">
               Transform Knowledge Into Personalized Learning
@@ -47,7 +46,7 @@ export function HomeMain() {
               <Info className="inline text-gray-800" ref={customRef} />
               <div className="flex items-center">
                 {hovering && (
-                  <div className="absolute bg-gray-300 z-40 font-normal font-sans rounded text-base p-3">
+                  <div className="absolute bg-gray-300 z-20 font-normal font-sans rounded text-base p-[3%] w-40">
                     Click on each feature to find out more
                   </div>
                 )}
@@ -56,8 +55,8 @@ export function HomeMain() {
             <div className="grid grid-cols-2 gap-x-[2%] gap-y-[6%]">
               <div className="flex flex-col">
                 <Link
-                  to="/features"
-                  className="hover:shadow-xs rounded-lg hover:shadow-[0_0_20px_rgba(0,0,0,0.25)] p-[1%]"
+                  to="/features/INC"
+                  className="hover:shadow-xs rounded-lg hover:shadow-[0_0_20px_rgba(0,0,0,0.25)] p-[8%]"
                 >
                   <NotebookText
                     className="text-leaf"
@@ -75,8 +74,8 @@ export function HomeMain() {
               </div>
               <div className="flex flex-col">
                 <Link
-                  to="/features"
-                  className="hover:shadow-xs rounded-lg hover:shadow-[0_0_20px_rgba(0,0,0,0.25)] p-[1%]"
+                  to="/features/PQD"
+                  className="hover:shadow-xs rounded-lg hover:shadow-[0_0_20px_rgba(0,0,0,0.25)] p-[8%]"
                 >
                   <BookOpenCheck
                     className="text-leaf"
@@ -94,12 +93,12 @@ export function HomeMain() {
               </div>
               <div className="flex flex-col">
                 <Link
-                  to="/features"
-                  className="hover:shadow-xs rounded-lg hover:shadow-[0_0_20px_rgba(0,0,0,0.25)] p-[1%]"
+                  to="/features/LearningAnalytics"
+                  className="hover:shadow-xs rounded-lg hover:shadow-[0_0_20px_rgba(0,0,0,0.25)] p-[8%]"
                 >
                   <ChartLine className="text-leaf" size={45} strokeWidth={1.5} />
                   <p className="font-semibold font-notojp text-xl 2xl:text-3xl py-[3%]">
-                    Analytics
+                    Learning Analytics
                   </p>
                   <p className="text-base 2xl:text-lg">
                     Track learner progress, weak points, engagement, and
@@ -109,8 +108,8 @@ export function HomeMain() {
               </div>
               <div className="flex flex-col">
                 <Link
-                  to="/features"
-                  className="hover:shadow-xs rounded-lg hover:shadow-[0_0_20px_rgba(0,0,0,0.25)] p-[1%]"
+                  to="/features/Chatbot"
+                  className="hover:shadow-xs rounded-lg hover:shadow-[0_0_20px_rgba(0,0,0,0.25)] p-[8%]"
                 >
                   <Bot className="text-leaf" size={45} strokeWidth={1.5} />
                   <p className="font-semibold font-notojp text-xl 2xl:text-3xl py-[3%]">

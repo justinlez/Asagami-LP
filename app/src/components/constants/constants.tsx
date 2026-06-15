@@ -23,9 +23,10 @@ import kyushuElect from "@/assets/companies/kyushuElect.svg";
 import nipponBank from "@/assets/companies/nipponBank.svg";
 import NTOU from "@/assets/companies/NTOU.svg";
 
-export const FEATURES = [
-  {
+export const FEATURES = {
+  INC: {
     name: "Intelligent Note Creation",
+    path: 'INC',
     steps: [
       "Create notes from scratch or transform existing materials (E.G. PDFs, slides, URLs, images) into clearer, more organized learning content.",
       "Customize the depth, length, tone, and generation mode of notes based on your preferences.",
@@ -33,8 +34,10 @@ export const FEATURES = [
     ],
     gif: [INCAni1, INCAni2, INCAni3],
   },
-  {
+
+  PQD: {
     name: "Personalized Quiz Design",
+    path: 'PQD',
     steps: [
       "Create quiz questions manually or automatically from existing notes and learning materials",
       "Generate multiple formats including MCQs, open-ended, fill-in-the-blanks, reordering, and scenario-based questions",
@@ -43,41 +46,49 @@ export const FEATURES = [
     ],
     gif: [PQDAni1, PQDAni2, PQDAni3, PQDAni4],
   },
-  {
+
+  LearningAnalytics: {
     name: "Learning Analytics",
+    path: 'LearningAnalytics',
     steps: [
       "Identify weak areas through performance analytics and recurring incorrect question trends.",
       "Track rankings, engagement, and overall learning progress within your class or organization.",
       "Monitor study consistency through learning streaks, revision activity, time spent across notes and quiz attempts.",
     ],
-    gif: [ LearningAnalytics1, LearningAnalytics2, LearningAnalytics3 ],
+    gif: [LearningAnalytics1, LearningAnalytics2, LearningAnalytics3],
   },
-  {
+
+  Chatbot: {
     name: "24/7 Assistance",
+    path: 'Chatbot',
     steps: [
       "Access instant AI-supported assistance anytime to clarify concepts, resolve doubts, and support independent learning",
       "Get step-by-step support for solving questions, understanding mistakes, and reinforcing difficult concepts",
     ],
     gif: [Chatbot1, Chatbot1],
   },
-  {
+
+  AdminPanel: {
     name: "Admin Panel",
+    path: 'AdminPanel',
     steps: [
       "Add and manage organization members in one centralized dashboard",
       "Share notes, quizzes, and curriculum materials seamlessly across teams",
       "Track engagement, completion rates, performance trends, and weak areas through real-time learning analytics",
     ],
-    gif: [AdminPanel1,AdminPanel2],
+    gif: [AdminPanel1, AdminPanel2],
   },
-  {
+
+  CurricPlanning: {
     name: "Curriculum Planning",
+    path: 'CurricPlanning',
     steps: [
       "Create custom or automatically generated curriculum structures for any topic, course, or training objective",
       "Organize, refine, and sequence topics based on your preferred learning flow, depth, and timeline",
     ],
-    gif: [CurricPlanning,CurricPlanning],
+    gif: [CurricPlanning, CurricPlanning],
   },
-];
+};
 
 export const COUNTRIES = [
   { name: "USA", flag: usa },

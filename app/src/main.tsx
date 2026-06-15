@@ -29,7 +29,7 @@ const router = createBrowserRouter([
         ],
       },
       {
-        path: "features",
+        path: "features/:featureName",
         element: <Features />,
       },
     ],

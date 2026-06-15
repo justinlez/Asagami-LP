@@ -5,8 +5,6 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 export function Navbar() {
-  const [isSettingsExpanded, setSettingsExpanded] = useState(false);
-  const [isAboutExpanded, setAboutExpanded] = useState(false);
   const [whichMenuExpanded, setWhichMenuExpanded] = useState<'settings'|'about'|null>(null);
   return (
     <div className="flex w-full relative z-50 py-3 min-h-[8vh] px-20 items-center">
@@ -27,7 +25,7 @@ export function Navbar() {
         </HeaderButton>
       </Link>
       <div className="ml-auto gap-3 flex">
-        <Link to="/features">
+        <Link to="/features/inc" onClick={()=>setWhichMenuExpanded(null)}>
           <HeaderButton>Features</HeaderButton>
         </Link>
         {/* <Link to="/aboutasagami">
