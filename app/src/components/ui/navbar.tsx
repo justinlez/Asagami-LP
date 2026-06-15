@@ -7,8 +7,9 @@ import { Link } from "react-router-dom";
 export function Navbar() {
   const [isSettingsExpanded, setSettingsExpanded] = useState(false);
   const [isAboutExpanded, setAboutExpanded] = useState(false);
+  const [whichMenuExpanded, setWhichMenuExpanded] = useState<'settings'|'about'|null>(null);
   return (
-    <div className="flex w-full py-3 min-h-[8vh] px-20 items-center">
+    <div className="flex w-full relative z-50 py-3 min-h-[8vh] px-20 items-center">
       <Link to="/">
         <HeaderButton className="text-left flex items-center hover:bg-background">
           <img
@@ -34,22 +35,25 @@ export function Navbar() {
         </Link> */}
         <div className="flex relative">
           <HeaderButton
-            onClick={()=>setAboutExpanded(!isAboutExpanded)}>
+            onClick={()=>setWhichMenuExpanded(whichMenuExpanded === 'about' ? null : 'about')}>
             About Us
-            {isAboutExpanded ? (
+            {whichMenuExpanded==='about' ? (
               <ChevronUp className="ms-1" size={15} />
             ) : (
               <ChevronDown className="ms-1" size={15} />
             )}
           </HeaderButton>
-          {isAboutExpanded && (
+          {whichMenuExpanded === 'about' && (
             <div className="absolute flex justify-center border top-full right-0 bg-white bg-opacity-90 rounded-xl p-3 mt-1 ">
               <ul className="whitespace-nowrap">
-                <Link to="/aboutasagami" onClick={()=>setAboutExpanded(!isAboutExpanded)}>
-                  <li> - Main </li>
+                <Link to="/aboutasagami/mission" onClick={()=>setWhichMenuExpanded(whichMenuExpanded === 'about' ? null : 'about')}>
+                  <li> - Mission & Vision </li>
                 </Link>
-                <Link to="https://www.eletus.co.jp/philosophy/" target="_blank"  onClick={()=>setAboutExpanded(!isAboutExpanded)}>
-                  <li> - Eletus </li>
+                <Link to='/aboutasagami/team' onClick={()=>setWhichMenuExpanded(whichMenuExpanded === 'about' ? null : 'about')}>
+                  <li> - Company Outline</li>
+                </Link>
+                <Link to="https://www.eletus.co.jp/philosophy/" target="_blank"  onClick={()=>setWhichMenuExpanded(whichMenuExpanded === 'about' ? null : 'about')}>
+                  <li> - About Eletus </li>
                 </Link>
               </ul>
             </div>
@@ -57,17 +61,17 @@ export function Navbar() {
         </div>
         <div className="flex relative">
           <HeaderButton
-            onClick={() => setSettingsExpanded(!isSettingsExpanded)}
+            onClick={() => setWhichMenuExpanded(whichMenuExpanded === 'settings' ? null : 'settings')}
           >
             Settings
-            {isSettingsExpanded ? (
+            {whichMenuExpanded ==='settings' ? (
               <ChevronUp className="ms-1" size={15} />
             ) : (
               <ChevronDown className="ms-1" size={15} />
             )}
           </HeaderButton>
 
-          {isSettingsExpanded && (
+          {whichMenuExpanded ==='settings' && (
             <div className="absolute flex justify-center border top-full right-0 bg-white bg-opacity-90 rounded-xl p-3 mt-1 ">
               <ul className="whitespace-nowrap">
                 <Link

@@ -1,6 +1,6 @@
 import AboutUsBg from "@/assets/AboutUsBg.jpg";
 
-export function AboutAsagami() {
+export function Mission() {
 
 
   return (

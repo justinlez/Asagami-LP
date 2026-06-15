@@ -7,8 +7,9 @@ import "@fontsource/space-grotesk";
 import "@fontsource/noto-sans-jp";
 import { Home } from "@/components/Home";
 import { NotFound } from "@/components/NotFound";
-import { AboutAsagami } from "@/components/AboutAsagami";
+import { Mission } from "@/components/aboutUs/Mission";
 import { Features } from "@/components/Features";
+import { Team } from "@/components/aboutUs/Team";
 
 const router = createBrowserRouter([
   {
@@ -22,7 +23,10 @@ const router = createBrowserRouter([
       },
       {
         path: "aboutasagami",
-        element: <AboutAsagami />,
+        children: [
+          { path: "mission", element: <Mission /> },
+          { path: "team", element: <Team /> },
+        ],
       },
       {
         path: "features",
