@@ -22,6 +22,7 @@ import daihatsu from "@/assets/companies/daihatsu.svg";
 import kyushuElect from "@/assets/companies/kyushuElect.svg";
 import nipponBank from "@/assets/companies/nipponBank.svg";
 import NTOU from "@/assets/companies/NTOU.svg";
+import SAP from "@/assets/companies/SAP.svg";
 
 export const FEATURES = {
   INC: {
@@ -104,4 +105,5 @@ export const COMPANIES = [
   { name: "Kyushu Electric", logo: kyushuElect },
   { name: "Nippon Bank", logo: nipponBank },
   { name: "NTOU", logo: NTOU },
+  { name: "SAP", logo: SAP}
 ];

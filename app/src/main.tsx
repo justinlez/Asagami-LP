@@ -5,6 +5,7 @@ import "@/index.css";
 import App from "@/App.tsx";
 import "@fontsource/space-grotesk";
 import "@fontsource/noto-sans-jp";
+import "@fontsource/noto-serif-jp";
 import { Home } from "@/components/Home";
 import { NotFound } from "@/components/NotFound";
 import { Mission } from "@/components/aboutUs/Mission";

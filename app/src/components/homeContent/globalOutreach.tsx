@@ -5,8 +5,6 @@ import { COMPANIES, COUNTRIES } from "../constants/constants";
 export function GlobalOutreach() {
   const [hoveredCountry, setHoveredCountry] = useState<string | null>(null);
 
-  const countries = COUNTRIES;
-  const companies = COMPANIES;
 
   return (
     <div className="h-auto w-full bg-background ">
@@ -18,7 +16,7 @@ export function GlobalOutreach() {
         className="flex flex-col items-center justify-center bg-cover bg-center bg-no-repeat h-[70vh] mb-[10vh]"
       >
         <div className="flex flex-row gap-x-[3%] justify-center w-3/4">
-          {countries.map((country) => (
+          {COUNTRIES.map((country) => (
             <div className="relative" key={country.name}>
               <img
                 src={country.flag}
@@ -43,15 +41,17 @@ export function GlobalOutreach() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center min-h-[30vh] gap-[2vh] mt-[10%]">
+      <div className="flex flex-col items-center min-h-[30vh] gap-[2vh] mt-[10%] max-w-[80vw] mx-auto">
         <div className="flex flex-row text-xl 2xl:text-3xl font-bold font-space">
           We have worked with
         </div>
-        <div className="flex flex-row gap-[5%] max-w-screen justify-center">
-          {companies.map((company) => (
-            <img src={company.logo} alt="" key={company.name} className="w-[20%]"/>
+        <div className="flex flex-row flex-wrap gap-x-[5vw] gap-y-[3vh]  max-w-screen justify-evenly">
+          {COMPANIES.map((company) => (
+            <img src={company.logo} alt="" key={company.name} className="flex h-[6vh] w-auto"/>
           ))}
+          <span className="flex w-[100%] justify-end italic">and more!</span>
         </div>
+        
       </div>
     </div>
   );

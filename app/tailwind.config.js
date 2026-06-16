@@ -7,6 +7,7 @@ export default {
       fontFamily: {
         space: ["Space Grotesk", "sans-serif"],
         notojp: ["Noto Sans JP", "sans-serif"],
+        notoserif: ["Noto Serif", "serif"],
       },
 
       borderRadius: {
@@ -27,6 +28,9 @@ export default {
         backgroundSecondary: "#2B364D",
 
         leaf: "#1F8A78",
+        bluePrimary: "#3736CF",
+        blueSecondary:"#BBDCEF",
+        turqoise: "#27A0D2",
         cardPrimary: "#1F2432",
         cardSecondary: "#2B364D",
         cardPrimaryHover: "#3C4965",

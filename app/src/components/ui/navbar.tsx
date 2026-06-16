@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 export function Navbar() {
   const [whichMenuExpanded, setWhichMenuExpanded] = useState<'settings'|'about'|null>(null);
   return (
-    <div className="flex w-full relative z-50 py-3 min-h-[8vh] px-20 items-center">
+    <div className="flex w-full relative z-50 py-3 min-h-[9vh] px-20 items-center">
       <Link to="/">
         <HeaderButton className="text-left flex items-center hover:bg-background">
           <img
@@ -15,7 +15,7 @@ export function Navbar() {
             alt=""
             className=" inline h-smLogo bg-opacity-0 rounded"
           />
-          <div className="ps-3 leading-none">
+          <div className="ps-3 leading-none flex-shrink-0">
             <strong className="font-notojp">Eletus 株式会社</strong>
             <br />
             <span className="font-space text-xs uppercase text-gray-500 text-capital">
@@ -25,20 +25,17 @@ export function Navbar() {
         </HeaderButton>
       </Link>
       <div className="ml-auto gap-3 flex">
-        <Link to="/features/inc" onClick={()=>setWhichMenuExpanded(null)}>
+        <Link to="/features/INC" onClick={()=>setWhichMenuExpanded(null)}>
           <HeaderButton>Features</HeaderButton>
         </Link>
-        {/* <Link to="/aboutasagami">
-          <HeaderButton>About Asagami</HeaderButton>
-        </Link> */}
-        <div className="flex relative">
+        <div className="flex relative flex-shrink-0">
           <HeaderButton
             onClick={()=>setWhichMenuExpanded(whichMenuExpanded === 'about' ? null : 'about')}>
             About Us
             {whichMenuExpanded==='about' ? (
-              <ChevronUp className="ms-1" size={15} />
+              <ChevronUp className="ms-1 stroke-[1.5] size-5 2xl:size-7" />
             ) : (
-              <ChevronDown className="ms-1" size={15} />
+              <ChevronDown className="ms-1 stroke-[1.5] size-5 2xl:size-7" />
             )}
           </HeaderButton>
           {whichMenuExpanded === 'about' && (
@@ -63,9 +60,9 @@ export function Navbar() {
           >
             Settings
             {whichMenuExpanded ==='settings' ? (
-              <ChevronUp className="ms-1" size={15} />
+              <ChevronUp className="ms-1 stroke-[1.5] size-5 2xl:size-7" />
             ) : (
-              <ChevronDown className="ms-1" size={15} />
+              <ChevronDown className="ms-1 stroke-[1.5] size-5 2xl:size-7" />
             )}
           </HeaderButton>
 
@@ -88,8 +85,7 @@ export function Navbar() {
             </div>
           )}
         </div>
-        <div></div>
-        <CTAButton>
+        <CTAButton className="flex-shrink-0">
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSfjsScFSVHqQLvXsUbW_J84qFjJsA8cUXuR1t0g6iKcaVAu7w/viewform"
             target="_blank"

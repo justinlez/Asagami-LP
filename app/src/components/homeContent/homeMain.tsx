@@ -23,11 +23,10 @@ export function HomeMain() {
       >
         <div className="flex flex-col w-[40%] animate-slideUp">
           <div className="flex flex-col min-h-[90vh] justify-center">
-            <div className="text-4xl 2xl:text-7xl font-bold font-notojp">
-              Transform Knowledge Into Personalized Learning
-            </div>
+              <h1>Transform Knowledge Into Personalized Learning</h1>
+            
             <br />
-            <div className="text-base 2xl:text-2xl font-space pb-6">
+            <div className="text-lg 2xl:text-2xl font-space pb-6">
               Asagami converts notes, SOPs, videos, manuals, and teaching
               materials into structured learning, adaptive quizzes, AI-supported
               revision, and real-time learning insights.
@@ -41,8 +40,8 @@ export function HomeMain() {
             </div>
           </div>
           <div className="mb-[15%] mt-[30%]">
-            <div className="flex flex-row text-3xl 2xl:text-5xl font-bold font-notojp items-center gap-2 pb-10">
-              How Asagami AI Works
+            <div className="flex flex-row items-center gap-2 pb-10">
+              <h2>How Asagami AI Works</h2>
               <Info className="inline text-gray-800" ref={customRef} />
               <div className="flex items-center">
                 {hovering && (

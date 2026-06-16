@@ -30,8 +30,8 @@ export function Features() {
       className="min-h-[70vh] w-[90vw] mx-auto bg-contain"
       style={{ backgroundImage: `url(${AboutUsBg2})` }}
     >
-      <div className="flex justify-center items-center h-[20vh] 2xl:text-5xl text-4xl font-notojp">
-        Key Features
+      <div className="flex justify-center items-center h-[20vh]">
+        <h2 className="font-normal">Key Features</h2>
       </div>
       <div className="flex justify-center items-center min-h-[15vh] ">
         <div className="flex flex-wrap justify-center">
