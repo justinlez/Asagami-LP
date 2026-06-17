@@ -41,15 +41,15 @@ export function GlobalOutreach() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center min-h-[30vh] gap-[2vh] mt-[10%] max-w-[80vw] mx-auto">
-        <div className="flex flex-row text-xl 2xl:text-3xl font-bold font-space">
+      <div className="flex flex-col items-center min-h-[30vh] gap-[2vh] mt-[10%] max-w-[80vw] mx-auto my-[5vh]">
+        <h3 className="flex flex-row h-[10vh] font-space">
           We have worked with
-        </div>
-        <div className="flex flex-row flex-wrap gap-x-[5vw] gap-y-[3vh]  max-w-screen justify-evenly">
+        </h3>
+        <div className="flex flex-row flex-wrap relative gap-x-[10vw] justify-center gap-y-[3vh] max-w-screen">
           {COMPANIES.map((company) => (
             <img src={company.logo} alt="" key={company.name} className="flex h-[6vh] w-auto"/>
           ))}
-          <span className="flex w-[100%] justify-end italic">and more!</span>
+          <span className="flex absolute bottom-0 right-10 italic text-base 2xl:text-2xl">and more!</span>
         </div>
         
       </div>

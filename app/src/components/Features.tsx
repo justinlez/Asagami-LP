@@ -8,16 +8,18 @@ import { useEffect, useMemo, useState } from "react";
 import { FEATURES } from "@/components/constants/constants";
 import AboutUsBg2 from "@/assets/AboutUsBg2.jpg";
 import { useNavigate, useParams } from "react-router-dom";
+import { useHover } from "@/lib/utils";
+import { Info } from "lucide-react";
 
 export function Features() {
   const navigate = useNavigate();
   const featurePath = useParams().featureName;
+  const { customRef, hovering } = useHover();
 
   const feature = featurePath?FEATURES[featurePath]: undefined;
-
+  const INFOTOOLTIPCONTENT = feature? "Click to find out more about each feature!" : "Click through each step to see a visual guide."
   const [chosenStep, setChosenStep] = useState(0);
-
-  const extension = feature?.gif[chosenStep].split(".").pop();
+  const extension = feature?feature.gif[chosenStep].split(".").pop():null;
 
   const featuresArray = useMemo(() => Object.entries(FEATURES), []);
 
@@ -31,8 +33,15 @@ export function Features() {
       style={{ backgroundImage: `url(${AboutUsBg2})` }}
     >
       <div className="flex justify-center items-center h-[20vh]">
-        <div className="font-normal text-5xl 2xl:text-7xl font-notoserif">
-          {feature ? feature.name : "Key Features"}
+        <div className="flex h-full items-center gap-x-[1vw] font-normal text-5xl 2xl:text-7xl font-notoserif relative">
+          {feature ? feature.name : "Key Features"} <Info className="inline text-gray-800 2xl:size-10" ref={customRef} />
+              <div className="flex items-center">
+                {hovering && (
+                  <div className="absolute bg-gray-300 z-20 font-normal font-sans rounded text-base p-[3%] w-40">
+                    {INFOTOOLTIPCONTENT}
+                  </div>
+                )}
+              </div>
         </div>
       </div>
       <div className="flex justify-center items-center min-h-[15vh] ">
@@ -78,6 +87,7 @@ export function Features() {
                 width="700"
                 autoPlay
                 loop
+                controls
                 muted
                 key={feature.gif[chosenStep]}
               >

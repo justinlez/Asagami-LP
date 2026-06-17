@@ -12,6 +12,7 @@ import CurricPlanning from "@/assets/featureVideos/CurricPlanning.mp4";
 import Chatbot1 from "@/assets/featureVideos/Chatbot1.mp4";
 import AdminPanel1 from "@/assets/featureVideos/AdminPanel1.jpg";
 import AdminPanel2 from "@/assets/featureVideos/AdminPanel2.mp4";
+import AdminPanel3 from "@/assets/featureVideos/AdminPanel3.mp4";
 import usa from "@/assets/countries/unitedstates.svg";
 import japan from "@/assets/countries/japan.svg";
 import philippines from "@/assets/countries/philippines.svg";
@@ -77,7 +78,7 @@ export const FEATURES = {
       "Share notes, quizzes, and curriculum materials seamlessly across teams",
       "Track engagement, completion rates, performance trends, and weak areas through real-time learning analytics",
     ],
-    gif: [AdminPanel1, AdminPanel2],
+    gif: [AdminPanel1, AdminPanel2,AdminPanel3],
   },
 
   CurricPlanning: {

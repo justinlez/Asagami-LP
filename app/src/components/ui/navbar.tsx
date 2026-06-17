@@ -39,16 +39,16 @@ export function Navbar() {
             )}
           </HeaderButton>
           {whichMenuExpanded === 'about' && (
-            <div className="absolute flex justify-center border top-full right-0 bg-white bg-opacity-90 rounded-xl p-3 mt-1 ">
+            <div className="absolute flex justify-center border top-full right-0 bg-white bg-opacity-90 rounded-xl  mt-1 ">
               <ul className="whitespace-nowrap">
                 <Link to="/aboutasagami/mission" onClick={()=>setWhichMenuExpanded(whichMenuExpanded === 'about' ? null : 'about')}>
-                  <li className="hover:text-blue-600 my-2"> - Mission & Vision </li>
+                  <li className="hover:bg-turqoise hover:text-white px-3 py-[5%] rounded-lg "> Mission & Vision </li>
                 </Link>
                 <Link to='/aboutasagami/team' onClick={()=>setWhichMenuExpanded(whichMenuExpanded === 'about' ? null : 'about')}>
-                  <li className="hover:text-blue-600 my-2"> - Company Outline</li>
+                  <li className="hover:bg-turqoise hover:text-white px-3 py-[5%] rounded-lg "> Company Outline</li>
                 </Link>
                 <Link to="https://www.eletus.co.jp/philosophy/" target="_blank"  onClick={()=>setWhichMenuExpanded(whichMenuExpanded === 'about' ? null : 'about')}>
-                  <li className="hover:text-blue-600 my-2"> - About Eletus </li>
+                  <li className="hover:bg-turqoise hover:text-white px-3 py-[5%] rounded-lg "> About Eletus </li>
                 </Link>
               </ul>
             </div>
