@@ -65,7 +65,7 @@ export function Features() {
           <div className="flex flex-col items-center w-full 2xl:w-1/2 gap-[2vh] my-[3%] h-auto">
             {feature.steps.map((step, index) => (
               <FeaturesCard
-                className="flex flex-row gap-2"
+                className={`flex flex-row gap-2 ${chosenStep !== index ? "opacity-75" : " scale-[1.05]"} `}
                 key={featurePath + " " + index}
                 onClick={() => {
                   setChosenStep(index);
@@ -84,7 +84,7 @@ export function Features() {
               />
             ) : (
               <video
-                width="700"
+                width= ''
                 autoPlay
                 loop
                 controls
