@@ -16,15 +16,14 @@ export function HomeMain() {
   const { customRef, hovering } = useHover();
 
   return (
-    <div className="bg-contain bg-no-repeat" style={{ backgroundImage: `url(${AboutUsBg})` }}>
-      <div
-        className="flex flex-row w-[90vw] mx-auto gap-[1%]"
-        
-      >
+    <div
+      className="bg-contain bg-no-repeat"
+      style={{ backgroundImage: `url(${AboutUsBg})` }}
+    >
+      <div className="flex flex-row w-[90vw] mx-auto gap-[1%]">
         <div className="flex flex-col w-[40%] animate-slideUp">
           <div className="flex flex-col min-h-[90vh] justify-center">
-              <h1>Transform Knowledge Into Personalized Learning</h1>
-            
+            <h1>Transform Knowledge Into Personalized Learning</h1>
             <br />
             <div className="text-lg 2xl:text-2xl font-space pb-6">
               Asagami converts notes, SOPs, videos, manuals, and teaching
@@ -95,7 +94,11 @@ export function HomeMain() {
                   to="/features/LearningAnalytics"
                   className="hover:shadow-xs rounded-lg hover:shadow-[0_0_20px_rgba(0,0,0,0.25)] p-[8%]"
                 >
-                  <ChartLine className="text-leaf" size={45} strokeWidth={1.5} />
+                  <ChartLine
+                    className="text-leaf"
+                    size={45}
+                    strokeWidth={1.5}
+                  />
                   <p className="font-semibold font-notojp text-xl 2xl:text-3xl py-[3%]">
                     Learning Analytics
                   </p>

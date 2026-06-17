@@ -27,7 +27,7 @@ import SAP from "@/assets/companies/SAP.svg";
 export const FEATURES = {
   INC: {
     name: "Intelligent Note Creation",
-    path: 'INC',
+    path: "INC",
     steps: [
       "Create notes from scratch or transform existing materials (E.G. PDFs, slides, URLs, images) into clearer, more organized learning content.",
       "Customize the depth, length, tone, and generation mode of notes based on your preferences.",
@@ -38,7 +38,7 @@ export const FEATURES = {
 
   PQD: {
     name: "Personalized Quiz Design",
-    path: 'PQD',
+    path: "PQD",
     steps: [
       "Create quiz questions manually or automatically from existing notes and learning materials",
       "Generate multiple formats including MCQs, open-ended, fill-in-the-blanks, reordering, and scenario-based questions",
@@ -50,7 +50,7 @@ export const FEATURES = {
 
   LearningAnalytics: {
     name: "Learning Analytics",
-    path: 'LearningAnalytics',
+    path: "LearningAnalytics",
     steps: [
       "Identify weak areas through performance analytics and recurring incorrect question trends.",
       "Track rankings, engagement, and overall learning progress within your class or organization.",
@@ -61,7 +61,7 @@ export const FEATURES = {
 
   Chatbot: {
     name: "24/7 Assistance",
-    path: 'Chatbot',
+    path: "Chatbot",
     steps: [
       "Access instant AI-supported assistance anytime to clarify concepts, resolve doubts, and support independent learning",
       "Get step-by-step support for solving questions, understanding mistakes, and reinforcing difficult concepts",
@@ -71,7 +71,7 @@ export const FEATURES = {
 
   AdminPanel: {
     name: "Admin Panel",
-    path: 'AdminPanel',
+    path: "AdminPanel",
     steps: [
       "Add and manage organization members in one centralized dashboard",
       "Share notes, quizzes, and curriculum materials seamlessly across teams",
@@ -82,7 +82,7 @@ export const FEATURES = {
 
   CurricPlanning: {
     name: "Curriculum Planning",
-    path: 'CurricPlanning',
+    path: "CurricPlanning",
     steps: [
       "Create custom or automatically generated curriculum structures for any topic, course, or training objective",
       "Organize, refine, and sequence topics based on your preferred learning flow, depth, and timeline",
@@ -105,5 +105,44 @@ export const COMPANIES = [
   { name: "Kyushu Electric", logo: kyushuElect },
   { name: "Nippon Bank", logo: nipponBank },
   { name: "NTOU", logo: NTOU },
-  { name: "SAP", logo: SAP}
+  { name: "SAP", logo: SAP },
+];
+
+export const ABOUTASAGAMI = [
+  {
+    label: "Company Name",
+    value: "Eletus Co. Ltd",
+  },
+  {
+    label: "Establishment",
+    value: "May 29, 2023",
+  },
+  {
+    label: "Representative",
+    value: "Masatoshi Sonada - CEO",
+  },
+  {
+    label: "Location",
+    value: "6-2-52-3307 Kashii Teruha, Higashi-ku, Fukuoka City",
+  },
+  {
+    label: "Residential Base",
+    value: [
+      {
+        subLabel: "Fukuoka",
+        value:
+          "CIC Fukuoka: ONE FUKUOKA BLDG. 7F, 1-11-1 Tenjin, Chuo-ku, Fukuoka City, Fukuoka Prefecture",
+      },
+      {
+        subLabel: "Aichi",
+        value:
+          "STATION Ai: 1-2-32 Tsurumai, Showa-ku, Nagoya City, Aichi Prefecture",
+      },
+    ],
+  },
+  {
+    label: "Business",
+    value:
+      "Development and operation of proprietary services / Learning and human resource development / IT and consulting",
+  },
 ];

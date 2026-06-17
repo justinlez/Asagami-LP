@@ -4,7 +4,6 @@ import {
   Brain,
   ChartLine,
   Gavel,
-  GitGraph,
   GraduationCap,
   Hammer,
   Handshake,
@@ -22,7 +21,7 @@ export function Mission() {
     >
       <div className="flex">
         <div className="flex flex-col ">
-          <div className="flex text-5xl font-mono h-[30vh] items-center animate-slideInRight">
+          <div className="flex text-5xl font-notoserif h-[30vh] items-center animate-slideInRight">
             Our Mission, Vision & Philosophy
           </div>
           <div className="flex w-5/6 mx-auto mt-[3%] justify-between gap-[4%]">
@@ -53,10 +52,8 @@ export function Mission() {
                 Philosophy
               </p>
               <p className="text-center">
-                Strengthen human judgment via responsible integration of AI.
-                Enable individuals and organizations to realize their{" "}
-                <strong className="italic">full potential</strong> by making
-                knowledge accessible, actionable, and empowering.
+                Strengthen human judgment and reach{" "}
+                <strong className="italic">full potential</strong>through responsible integration of AI, making knowledge accessible, actionable and enduring
               </p>
             </div>
           </div>
@@ -126,7 +123,7 @@ export function Mission() {
         </div>
       </div>
       <div className="flex w-full items-center">
-        <div className="flex flex-col w-1/2">
+        <div className="flex flex-col w-1/2 pe-10">
           <img src={handsome3} alt="" />
         </div>
         <div className="flex flex-col w-1/2 gap-y-[3vh]">
@@ -177,26 +174,26 @@ export function Mission() {
           </p>
         </div>
       </div>
-      <div className="flex flex-col w-full items-center">
+      <div className="flex flex-col w-full items-center my-[5vh]">
         <h2 className="flex font-notoserif text-bluePrimary">What We Value in Everyday Decision-Making</h2>
-        <div className="flex flex-wrap justify-center p-[6%] gap-y-[2vh] gap-x-[5%]">
-          <div className="min-w-1/4">
+        <div className="flex flex-wrap justify-center p-[6%] gap-y-[5vh] gap-x-[5%]">
+          <div className="w-1/4 text-center">
             <GraduationCap className="text-leaf stroke-1 size-8 2xl:size-14 mx-auto" />{" "}
             <h3 className="font-semibold font-sans">Learn, Grow, Enjoy the Journey</h3>
           </div>
-          <div>
+          <div className="w-1/4 text-center">
             <Handshake className="text-leaf stroke-1 size-8 2xl:size-14 mx-auto" />{" "}
             <h3 className="font-semibold font-sans">The power of Combinining Different Perspecitves</h3>{" "}
           </div>
-          <div>
+          <div className="w-1/4 text-center">
             <Hammer className="text-leaf stroke-1 size-8 2xl:size-14 mx-auto" />{" "}
             <h3 className="font-semibold font-sans">Stay Hands-On and Deliver Results</h3>
           </div>
-          <div>
+          <div className="w-1/4 text-center">
             <ChartLine className="text-leaf stroke-1 size-8 2xl:size-14 mx-auto" />{" "}
             <h3 className="font-semibold font-sans">Take Action. Do it Right. Create Impact.</h3>
           </div>
-          <div>
+          <div className="w-1/4 text-center">
             <ThumbsUp className="text-leaf stroke-1 size-8 2xl:size-14 mx-auto" />{" "}
             <h3 className="font-semibold font-sans">Make your Choices the Right Ones</h3>
           </div>
