@@ -53,7 +53,7 @@ export function Mission() {
               </p>
               <p className="text-center">
                 Strengthen human judgment and reach{" "}
-                <strong className="italic">full potential</strong>through responsible integration of AI, making knowledge accessible, actionable and enduring
+                <strong className="italic">full potential</strong> through responsible integration of AI, making knowledge accessible, actionable and enduring
               </p>
             </div>
           </div>
@@ -170,7 +170,7 @@ export function Mission() {
             <span className="font-space uppercase">Act</span>{" "}
           </h3>
           <p className="w-[90%]">
-            Bridge the gap between learning and execution
+            Bridge the gap between learning and execution, helping people apply knowledge confidently in the real world.
           </p>
         </div>
       </div>

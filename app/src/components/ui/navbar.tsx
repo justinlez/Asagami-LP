@@ -25,7 +25,7 @@ export function Navbar() {
         </HeaderButton>
       </Link>
       <div className="ml-auto gap-3 flex">
-        <Link to="/features/INC" onClick={()=>setWhichMenuExpanded(null)}>
+        <Link to="/features" onClick={()=>setWhichMenuExpanded(null)}>
           <HeaderButton>Features</HeaderButton>
         </Link>
         <div className="flex relative flex-shrink-0">
@@ -42,13 +42,13 @@ export function Navbar() {
             <div className="absolute flex justify-center border top-full right-0 bg-white bg-opacity-90 rounded-xl p-3 mt-1 ">
               <ul className="whitespace-nowrap">
                 <Link to="/aboutasagami/mission" onClick={()=>setWhichMenuExpanded(whichMenuExpanded === 'about' ? null : 'about')}>
-                  <li> - Mission & Vision </li>
+                  <li className="hover:text-blue-600 my-2"> - Mission & Vision </li>
                 </Link>
                 <Link to='/aboutasagami/team' onClick={()=>setWhichMenuExpanded(whichMenuExpanded === 'about' ? null : 'about')}>
-                  <li> - Company Outline</li>
+                  <li className="hover:text-blue-600 my-2"> - Company Outline</li>
                 </Link>
                 <Link to="https://www.eletus.co.jp/philosophy/" target="_blank"  onClick={()=>setWhichMenuExpanded(whichMenuExpanded === 'about' ? null : 'about')}>
-                  <li> - About Eletus </li>
+                  <li className="hover:text-blue-600 my-2"> - About Eletus </li>
                 </Link>
               </ul>
             </div>
@@ -71,13 +71,13 @@ export function Navbar() {
               <ul className="whitespace-nowrap">
                 <Link
                   to="/"
-                  className="hover:bg-gray-200 visited:text-purple-600"
+                  className=" hover:text-blue-600 my-2"
                 >
                   <li>- English</li>
                 </Link>
                 <Link
                   to="/"
-                  className="hover:bg-gray-200 visited:text-purple-600"
+                  className=" hover:text-blue-600 my-2"
                 >
                   <li>- Japanese</li>
                 </Link>

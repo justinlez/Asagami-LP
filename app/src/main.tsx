@@ -30,8 +30,17 @@ const router = createBrowserRouter([
         ],
       },
       {
-        path: "features/:featureName",
-        element: <Features />,
+        path: "features",
+        children: [
+          {
+            index: true,
+            element: <Features />,
+          },
+          {
+            path: ":featureName",
+            element: <Features />,
+          },
+        ],
       },
     ],
   },
