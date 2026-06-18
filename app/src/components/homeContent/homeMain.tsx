@@ -21,8 +21,8 @@ export function HomeMain() {
       style={{ backgroundImage: `url(${AboutUsBg})` }}
     >
       <div className="flex flex-row w-[90vw] mx-auto gap-[1%]">
-        <div className="flex flex-col w-[40%] animate-slideUp">
-          <div className="flex flex-col min-h-[90vh] justify-center">
+        <div className="flex flex-col w-[40%] z-20">
+          <div className="flex flex-col min-h-[90vh] justify-center animate-slideInRight">
             <h1>Transform Knowledge Into Personalized Learning</h1>
             <br />
             <div className="text-lg 2xl:text-2xl font-space pb-6">
@@ -39,13 +39,13 @@ export function HomeMain() {
             </div>
           </div>
           <div className="mb-[15%] mt-[30%]">
-            <div className="flex flex-row items-center gap-2 pb-10">
+            <div className="flex relative flex-row items-center gap-2 pb-10">
               <h2>How Asagami AI Works</h2>
               <Info className="inline text-gray-800" ref={customRef} />
-              <div className="flex items-center">
+              <div className="flex items-center relative">
                 {hovering && (
-                  <div className="absolute bg-gray-300 z-20 font-normal font-sans rounded text-base p-[3%] w-40">
-                    Click on each feature to find out more
+                  <div className="absolute bg-[#c4c4c4]  font-sans rounded text-base p-2 w-40">
+                    Click on each feature to find out more!
                   </div>
                 )}
               </div>

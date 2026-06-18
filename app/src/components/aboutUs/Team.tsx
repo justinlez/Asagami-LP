@@ -13,14 +13,14 @@ export function Team() {
         <br />
         <div className="flex flex-col w-full px-[1vw]  text-xl">
           {ABOUTASAGAMI.map((item) => (
-            <div className="flex flex-row border-b border-gray-300 pt-[2vh] pb-[0.5%]">
+            <div className="flex flex-row border-b border-gray-300 pt-[2vh] pb-[0.5%]" key={item.label}>
               <div className="flex flex-col flex-shrink-0 w-1/6 text-gray-600 font-[700] font-notoserif">
                 {item.label}
               </div>
               {Array.isArray(item.value) ? (
                 <div className="flex flex-col font-notojp gap-y-4">
                   {item.value.map((subItem) => (
-                    <div>
+                    <div key={subItem.subLabel}>
                       <p className="font-bold underline">{subItem.subLabel}</p>
                       <p className="font-[500]">{subItem.value}</p>
                     </div>
@@ -51,7 +51,6 @@ export function Team() {
               <p className="text-[#6236F5] pb-2">Co-Founder, Finance Lead</p>
               <p className="flex gap-[5%] text-gray-400">
                 <Facebook />
-                <Github />
                 <Link to='https://www.linkedin.com/in/daideguchi/'>
                     <Linkedin />
                 </Link>
@@ -71,7 +70,6 @@ export function Team() {
               <p className="text-[#6236F5] pb-2">Founder, CEO</p>
               <p className="flex gap-[5%] text-gray-400">
                 <Facebook />
-                <Github />
                 <Link to='https://www.linkedin.com/in/masatoshi-sonoda-eletus/' target="_blank">
                     <Linkedin />
                 </Link>
@@ -91,7 +89,6 @@ export function Team() {
               <p className="text-[#6236F5] pb-2">Chief Technology Officer</p>
               <p className="flex gap-[5%] text-gray-400">
                 <Facebook />
-                <Github />
                 <Linkedin />
               </p>
             </div>

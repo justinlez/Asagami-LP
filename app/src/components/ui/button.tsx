@@ -3,9 +3,9 @@ import { cn } from "@/lib/utils";
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
 interface FeaturesCardProps extends React.HTMLAttributes<HTMLDivElement> {}
 
-export function HeaderButton({ children, className, ...props }: ButtonProps) {
+export function NavButton({ children, className, ...props }: ButtonProps) {
   return (
-    <button className={cn("flex items-center text-base 2xl:text-lg hover:bg-gray-200 h-10 px-3 rounded", className)} {...props}>
+    <button className={cn("flex items-center text-base 2xl:text-lg hover:bg-gray-300/50 h-10 px-3 rounded", className)} {...props}>
       {children}
     </button>
   );

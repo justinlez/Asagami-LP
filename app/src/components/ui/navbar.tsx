@@ -1,15 +1,15 @@
 import logo from "@/assets/eletus-logo.jpg";
-import { CTAButton, HeaderButton } from "@/components/ui/button";
+import { CTAButton, NavButton } from "@/components/ui/button";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
 export function Navbar() {
-  const [whichMenuExpanded, setWhichMenuExpanded] = useState<'settings'|'about'|null>(null);
+  const [whichMenuExpanded, setWhichMenuExpanded] = useState<'Language'|'about'|null>(null);
   return (
     <div className="flex w-full relative z-50 py-3 min-h-[9vh] px-20 items-center">
       <Link to="/">
-        <HeaderButton className="text-left flex items-center hover:bg-background">
+        <NavButton className="text-left flex items-center hover:bg-background">
           <img
             src={logo}
             alt=""
@@ -22,14 +22,14 @@ export function Navbar() {
               Personal Computer Ideal / AI Era
             </span>
           </div>
-        </HeaderButton>
+        </NavButton>
       </Link>
       <div className="ml-auto gap-3 flex">
         <Link to="/features" onClick={()=>setWhichMenuExpanded(null)}>
-          <HeaderButton>Features</HeaderButton>
+          <NavButton>Features</NavButton>
         </Link>
         <div className="flex relative flex-shrink-0">
-          <HeaderButton
+          <NavButton
             onClick={()=>setWhichMenuExpanded(whichMenuExpanded === 'about' ? null : 'about')}>
             About Us
             {whichMenuExpanded==='about' ? (
@@ -37,10 +37,10 @@ export function Navbar() {
             ) : (
               <ChevronDown className="ms-1 stroke-[1.5] size-5 2xl:size-7" />
             )}
-          </HeaderButton>
+          </NavButton>
           {whichMenuExpanded === 'about' && (
             <div className="absolute flex justify-center border top-full right-0 bg-white bg-opacity-90 rounded-xl  mt-1 ">
-              <ul className="whitespace-nowrap">
+              <ul className="whitespace-nowrap min-w-28">
                 <Link to="/aboutasagami/mission" onClick={()=>setWhichMenuExpanded(whichMenuExpanded === 'about' ? null : 'about')}>
                   <li className="hover:bg-turqoise hover:text-white px-3 py-[5%] rounded-lg "> Mission & Vision </li>
                 </Link>
@@ -55,31 +55,31 @@ export function Navbar() {
           )}
         </div>
         <div className="flex relative">
-          <HeaderButton
-            onClick={() => setWhichMenuExpanded(whichMenuExpanded === 'settings' ? null : 'settings')}
+          <NavButton
+            onClick={() => setWhichMenuExpanded(whichMenuExpanded === 'Language' ? null : 'Language')}
           >
-            Settings
-            {whichMenuExpanded ==='settings' ? (
+            Language
+            {whichMenuExpanded ==='Language' ? (
               <ChevronUp className="ms-1 stroke-[1.5] size-5 2xl:size-7" />
             ) : (
               <ChevronDown className="ms-1 stroke-[1.5] size-5 2xl:size-7" />
             )}
-          </HeaderButton>
+          </NavButton>
 
-          {whichMenuExpanded ==='settings' && (
-            <div className="absolute flex justify-center border top-full right-0 bg-white bg-opacity-90 rounded-xl p-3 mt-1 ">
-              <ul className="whitespace-nowrap">
+          {whichMenuExpanded ==='Language' && (
+            <div className="absolute flex justify-center border top-full right-0 bg-white bg-opacity-90 rounded-xl mt-1 ">
+              <ul className="whitespace-nowrap min-w-28">
                 <Link
                   to="/"
-                  className=" hover:text-blue-600 my-2"
+                  className="w-full"
                 >
-                  <li>- English</li>
+                  <li className="hover:bg-turqoise hover:text-white px-3 py-[7%] rounded-lg ">English</li>
                 </Link>
                 <Link
                   to="/"
-                  className=" hover:text-blue-600 my-2"
+                  className="w-full"
                 >
-                  <li>- Japanese</li>
+                  <li className="hover:bg-turqoise hover:text-white px-3 py-[7%] rounded-lg ">Japanese</li>
                 </Link>
               </ul>
             </div>

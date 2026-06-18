@@ -175,7 +175,7 @@ export function Mission() {
         </div>
       </div>
       <div className="flex flex-col w-full items-center my-[5vh]">
-        <h2 className="flex font-notoserif text-bluePrimary">What We Value in Everyday Decision-Making</h2>
+        <h2 className="flex font-notoserif text-[#0052b4]">What We Value in Everyday Decision-Making</h2>
         <div className="flex flex-wrap justify-center p-[6%] gap-y-[5vh] gap-x-[5%]">
           <div className="w-1/4 text-center">
             <GraduationCap className="text-leaf stroke-1 size-8 2xl:size-14 mx-auto" />{" "}
@@ -183,7 +183,7 @@ export function Mission() {
           </div>
           <div className="w-1/4 text-center">
             <Handshake className="text-leaf stroke-1 size-8 2xl:size-14 mx-auto" />{" "}
-            <h3 className="font-semibold font-sans">The power of Combinining Different Perspecitves</h3>{" "}
+            <h3 className="font-semibold font-sans">The power of Combining Different Perspectives</h3>{" "}
           </div>
           <div className="w-1/4 text-center">
             <Hammer className="text-leaf stroke-1 size-8 2xl:size-14 mx-auto" />{" "}

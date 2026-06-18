@@ -78,7 +78,7 @@ export const FEATURES = {
       "Share notes, quizzes, and curriculum materials seamlessly across teams",
       "Track engagement, completion rates, performance trends, and weak areas through real-time learning analytics",
     ],
-    gif: [AdminPanel1, AdminPanel2,AdminPanel3],
+    gif: [AdminPanel1, AdminPanel2, AdminPanel3],
   },
 
   CurricPlanning: {
@@ -145,5 +145,20 @@ export const ABOUTASAGAMI = [
     label: "Business",
     value:
       "Development and operation of proprietary services / Learning and human resource development / IT and consulting",
+  },
+];
+
+export const USECASES = [
+  {
+    label: "Education",
+    img: NTOU,
+  },
+  {
+    label: "Commercial",
+    img: nipponBank,
+  },
+  {
+    label: "Onboarding",
+    img: SAP,
   },
 ];
