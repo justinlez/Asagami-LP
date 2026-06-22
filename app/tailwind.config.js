@@ -1,5 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 
+import { transcode } from 'buffer';
+import { transform } from 'typescript';
+
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
@@ -57,8 +60,12 @@ export default {
             transform: "translateX(0)",
           },
         },
-        rotateX: {
+        rotateX: {  
           "0%": {
+            transform: "rotateX(0deg)",
+            opacity: "1",
+          },
+          '30%': {
             transform: "rotateX(90deg)",
             opacity: "0",
           },
@@ -67,11 +74,22 @@ export default {
             opacity: "1",
           },
         },
+        rotateOutX: {
+          "0%": {
+            transform: "rotateX(90deg)",
+            opacity: "0",
+          },
+          "100%": {
+            transform: "rotateX(0deg)",
+            opacity: "1",
+          },
+        }
       },
       animation: {
         slideUp: "slideUp 0.8s ease-out forwards",
         slideInRight: "slideInRight 0.8s ease-out forwards",
-        rotateX: "rotateX 1s ease-out forwards",
+        rotateX: "rotateX 1.2s ease-out forwards",
+        rotateOutX: "rotateOutX 1.2s ease-out forwards"
       },
     },
   },

@@ -6,6 +6,11 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export function UseCase() {
   const [useCaseNumber, setUseCaseNumber] = useState(0);
+  const [isFlipped, setIsFlipped] = useState(false);
+  function handleFlip(){
+
+  }
+ 
 
   const canClickLeft = useCaseNumber > 0;
   const canClickRight = useCaseNumber < USECASES.length - 1;
@@ -32,7 +37,8 @@ export function UseCase() {
           </p>
         </div>
         <div
-          className="flex flex-col min-h-[70vh] w-3/4 relative justify-center rounded-3xl text-white py-6 "
+          className={`flex flex-col min-h-[70vh] w-3/4 relative justify-center rounded-3xl text-white py-6 ${isFlipped ? "animate-rotateX": 'animate-rotateOutX'}`}
+          key={`${USECASES[useCaseNumber]} ${isFlipped}`}
           style={{
             backgroundImage: `linear-gradient(to bottom, transparent, black), url(${USECASES[useCaseNumber].img})`,
             backgroundSize: "cover",
@@ -42,41 +48,57 @@ export function UseCase() {
           <NavButton
             className="absolute left-[3%] rounded-full p-2 h-10 2xl:p-1  disabled:text-gray-400 disabled:hover:bg-transparent"
             disabled={!canClickLeft}
-            onClick={() => setUseCaseNumber(useCaseNumber - 1)}
+            onClick={() => {
+              setUseCaseNumber(useCaseNumber - 1);
+              isFlipped && setIsFlipped(false);
+            }}
           >
             <ChevronLeft className="size-6 2xl:size-8" />
           </NavButton>
-          <div className="flex flex-col px-[12%] h-full ">
-            <h1
-              className="flex justify-center items-center h-[20%] py-3 2xl:py-10 font-notoserif font-bold  text-center uppercase"
-              style={{ textShadow: "0px 4px 4px rgba(0, 0, 0, 0.5)" }}
-            >
-              {USECASES[useCaseNumber].label}
-            </h1>
-            {Array.isArray(USECASES[useCaseNumber].content) ? (
-              <div className="flex flex-col gap-8 pt-3">
-                {USECASES[useCaseNumber].content.map((item, index) => (
-                  <div className="" key={item.subLabel}>
-                    <h3>{item.subLabel}</h3>
-                    <ul
-                      className="ps-8 list-disc"
-                      style={{ textShadow: "0px 4px 4px rgba(0, 0, 0, 1)" }}
-                    >
-                      {item.subDesc.map((point) => (
-                        <li key={point}>{point}</li>
-                      ))}
-                    </ul>
+          <div
+            className="flex flex-col px-[12%] h-full "
+            onClick={() =>
+              setIsFlipped(prev=>!prev)
+            }
+          >
+            {isFlipped ? (
+              <div>
+                {Array.isArray(USECASES[useCaseNumber].content) ? (
+                  <div className="flex flex-col gap-8 pt-3">
+                    {USECASES[useCaseNumber].content.map((item, index) => (
+                      <div className="" key={item.subLabel}>
+                        <h3>{item.subLabel}</h3>
+                        <ul
+                          className="ps-8 list-disc"
+                          style={{ textShadow: "0px 4px 4px rgba(0, 0, 0, 1)" }}
+                        >
+                          {item.subDesc.map((point) => (
+                            <li key={point}>{point}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                ) : (
+                  <div> kiv </div>
+                )}
               </div>
             ) : (
-              <div> kiv </div>
+              <h1
+                className="flex justify-center items-center h-full py-3 2xl:py-10 font-notoserif font-bold  text-center uppercase"
+                style={{ textShadow: "0px 4px 4px rgba(0, 0, 0, 0.5)" }}
+              >
+                {USECASES[useCaseNumber].label}
+              </h1>
             )}
           </div>
           <NavButton
             className="absolute right-[3%] rounded-full p-2 2xl:p-1 h-10 disabled:text-gray-400 disabled:hover:bg-transparent"
             disabled={!canClickRight}
-            onClick={() => setUseCaseNumber(useCaseNumber + 1)}
+            onClick={() => {
+              setUseCaseNumber(useCaseNumber + 1);
+              isFlipped && setIsFlipped(false);
+            }}
           >
             <ChevronRight className="size-6 2xl:size-8" />
           </NavButton>
