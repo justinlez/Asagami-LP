@@ -3,9 +3,20 @@ import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "@/index.css";
 import App from "@/App.tsx";
-import "@fontsource/space-grotesk";
-import "@fontsource/noto-sans-jp";
-import "@fontsource/noto-serif-jp";
+import "@fontsource/space-grotesk/400.css";
+import "@fontsource/space-grotesk/500.css";
+import "@fontsource/space-grotesk/600.css";
+import "@fontsource/space-grotesk/700.css";
+
+import "@fontsource/noto-sans-jp/400.css";
+import "@fontsource/noto-sans-jp/500.css";
+import "@fontsource/noto-sans-jp/600.css";
+import "@fontsource/noto-sans-jp/700.css";
+
+import "@fontsource/noto-serif-jp/400.css";
+import "@fontsource/noto-serif-jp/500.css";
+import "@fontsource/noto-serif-jp/600.css";
+import "@fontsource/noto-serif-jp/700.css";
 import { Home } from "@/components/Home";
 import { NotFound } from "@/components/NotFound";
 import { Mission } from "@/components/aboutUs/Mission";

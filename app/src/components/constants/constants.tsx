@@ -24,6 +24,9 @@ import kyushuElect from "@/assets/companies/kyushuElect.svg";
 import nipponBank from "@/assets/companies/nipponBank.svg";
 import NTOU from "@/assets/companies/NTOU.svg";
 import SAP from "@/assets/companies/SAP.svg";
+import education from "@/assets/education.svg";
+import knowledgeManagement from "@/assets/knowledgeManagement.svg";
+import onboarding from "@/assets/onboarding.svg";
 
 export const FEATURES = {
   INC: {
@@ -151,14 +154,64 @@ export const ABOUTASAGAMI = [
 export const USECASES = [
   {
     label: "Education",
-    img: NTOU,
+    img: education,
+    content: [
+      {
+        subLabel: "IT & Software",
+        subDesc:
+          ["Automatically convert release notes and technical documentation into interactive quizzes and learning modules. Identify knowledge gaps and deliver targeted reinforcement "],
+      },
+      {
+        subLabel: "Retail Staff Education",
+        subDesc:
+          ["Turn product catalogs and seasonal promotions into learning modules. Track and reward top performers to drive engagement."],
+      },
+      {
+        subLabel: "Education & E-Learning",
+        subDesc:
+          ["Teachers can create dynamic materials from existing handouts and get real-time insights into class and individual progress. Perfect for flipped classrooms and remote learning."],
+      },
+    ],
   },
   {
-    label: "Commercial",
-    img: nipponBank,
+    label: "Knowledge Management",
+    img: knowledgeManagement,
+    desc: "",
+    content: [
+      {
+        subLabel: "Compliance & Finance",
+        subDesc: [
+          "Transform internal policies and regulations into interactive learning quizzes and assessments.",
+          "Simplify policy updates by automatically refreshing learning content whenever regulations change.",
+        ],
+      },
+      {
+        subLabel: "Global & Offshore Collaboration",
+        subDesc: [
+          "Create understandable study guides from multilingual technical documents while maintaining a single source of truth across time zones and cultures.",
+        ],
+      },
+    ],
   },
   {
     label: "Onboarding",
-    img: SAP,
+    img: onboarding,
+    desc: "",
+    content: [
+      {
+        subLabel: "Product Rollouts",
+        subDesc: [
+          "Transform product specifications, release documentation, and feature updates into interactive learning modules and assessments.",
+          "Ensure teams stay aligned and confident as new products, features, and processes are introduced.",
+        ],
+      },
+      {
+        subLabel: "Safety & Operations",
+        subDesc: [
+          "Convert safety procedures, operational manuals, and workplace guidelines into engaging, interactive training experiences.",
+          "Increase participation, measure knowledge retention, and ensure employees consistently understand and follow critical procedures.",
+        ],
+      },
+    ],
   },
 ];
