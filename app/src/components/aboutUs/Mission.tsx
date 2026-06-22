@@ -16,10 +16,10 @@ import handsome2 from "@/assets/aboutus/handsome3.svg";
 export function Mission() {
   return (
     <div
-      className={`flex flex-col w-[90vw] min-h-screen mx-auto bg-contain bg-no-repet`}
+      className={`flex flex-col min-h-screen bg-contain bg-no-repet`}
       style={{ backgroundImage: `url(${AboutUsBg})` }}
     >
-      <div className="flex">
+      <div className="flex w-[90vw] mx-auto">
         <div className="flex flex-col ">
           <div className="flex text-5xl font-notoserif h-[30vh] items-center animate-slideInRight">
             Our Mission, Vision & Philosophy
@@ -83,7 +83,7 @@ export function Mission() {
         </div>
       </div>
       <div className="flex w-full items-center h-[75vh]">
-        <div className="flex flex-col w-1/2 px-[3%] h-full justify-evenly">
+        <div className="flex flex-col w-1/2 px-[6%] h-full justify-evenly">
           <div>
             <h3>
               <span className="text-leaf">01</span> A human-friendly AI
@@ -175,25 +175,25 @@ export function Mission() {
         </div>
       </div>
       <div className="flex flex-col w-full items-center my-[5vh]">
-        <h2 className="flex font-notoserif text-[#0052b4]">What We Value in Everyday Decision-Making</h2>
-        <div className="flex flex-wrap justify-center p-[6%] gap-y-[5vh] gap-x-[5%]">
-          <div className="w-1/4 text-center">
+        <h2 className="flex font-notoserif text-[#0052b4] text-center">What We Value in Everyday Decision-Making</h2>
+        <div className="flex flex-wrap justify-center p-[6%] gap-y-[7vh] gap-x-[5%]">
+          <div className="md:w-1/4 text-center">
             <GraduationCap className="text-leaf stroke-1 size-8 2xl:size-14 mx-auto" />{" "}
             <h3 className="font-semibold font-sans">Learn, Grow, Enjoy the Journey</h3>
           </div>
-          <div className="w-1/4 text-center">
+          <div className="md:w-1/4 text-center">
             <Handshake className="text-leaf stroke-1 size-8 2xl:size-14 mx-auto" />{" "}
             <h3 className="font-semibold font-sans">The power of Combining Different Perspectives</h3>{" "}
           </div>
-          <div className="w-1/4 text-center">
+          <div className="md:w-1/4 text-center">
             <Hammer className="text-leaf stroke-1 size-8 2xl:size-14 mx-auto" />{" "}
             <h3 className="font-semibold font-sans">Stay Hands-On and Deliver Results</h3>
           </div>
-          <div className="w-1/4 text-center">
+          <div className="md:w-1/4 text-center">
             <ChartLine className="text-leaf stroke-1 size-8 2xl:size-14 mx-auto" />{" "}
             <h3 className="font-semibold font-sans">Take Action. Do it Right. Create Impact.</h3>
           </div>
-          <div className="w-1/4 text-center">
+          <div className="md:w-1/4 text-center">
             <ThumbsUp className="text-leaf stroke-1 size-8 2xl:size-14 mx-auto" />{" "}
             <h3 className="font-semibold font-sans">Make your Choices the Right Ones</h3>
           </div>

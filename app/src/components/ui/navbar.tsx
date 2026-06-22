@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 export function Navbar() {
   const [whichMenuExpanded, setWhichMenuExpanded] = useState<'Language'|'about'|null>(null);
   return (
-    <div className="flex w-full relative z-50 py-3 min-h-[9vh] px-20 items-center">
+    <div className="flex w-full flex-wrap relative z-50 py-3 min-h-[9vh] px-[5vw] items-center">
       <Link to="/">
         <NavButton className="text-left flex items-center hover:bg-background">
           <img
@@ -24,7 +24,7 @@ export function Navbar() {
           </div>
         </NavButton>
       </Link>
-      <div className="ml-auto gap-3 flex">
+      <div className="ml-auto gap-[1vw] flex flex-wrap">
         <Link to="/features" onClick={()=>setWhichMenuExpanded(null)}>
           <NavButton>Features</NavButton>
         </Link>
