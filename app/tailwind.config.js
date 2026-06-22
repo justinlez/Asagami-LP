@@ -29,7 +29,7 @@ export default {
 
         leaf: "#1F8A78",
         bluePrimary: "#3736CF",
-        blueSecondary:"#BBDCEF",
+        blueSecondary: "#BBDCEF",
         turqoise: "#27A0D2",
         cardPrimary: "#1F2432",
         cardSecondary: "#2B364D",
@@ -48,21 +48,31 @@ export default {
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
         slideInRight: {
-          '0%': {
-            opacity: '0',
-            transform: 'translateX(180px)',
+          "0%": {
+            opacity: "0",
+            transform: "translateX(180px)",
           },
-          '100%': {
-            opacity: '1',
-            transform: 'translateX(0)',
+          "100%": {
+            opacity: "1",
+            transform: "translateX(0)",
+          },
+        },
+        rotateX: {
+          "0%": {
+            transform: "rotateX(90deg)",
+            opacity: "0",
+          },
+          "100%": {
+            transform: "rotateX(0deg)",
+            opacity: "1",
           },
         },
       },
       animation: {
         slideUp: "slideUp 0.8s ease-out forwards",
-        slideInRight: "slideInRight 0.8s ease-out forwards"
+        slideInRight: "slideInRight 0.8s ease-out forwards",
+        rotateX: "rotateX 1s ease-out forwards",
       },
-
     },
   },
 };
