@@ -1,12 +1,11 @@
 import AboutUsBg2 from "@/assets/AboutUsBg2.jpg";
 import { useState } from "react";
 import { USECASES } from "@/components/constants/constants";
-import { FeaturesCard, NavButton } from "@/components/ui/button";
+import { NavButton } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export function UseCase() {
   const [useCaseNumber, setUseCaseNumber] = useState(0);
-  const [isFlip, setFlip] = useState(false);
 
   const canClickLeft = useCaseNumber > 0;
   const canClickRight = useCaseNumber < USECASES.length - 1;
