@@ -6,12 +6,17 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export function UseCase() {
   const [useCaseNumber, setUseCaseNumber] = useState(0);
+  const [animationState, setAnimationState] = useState(null);
   const [isFlipped, setIsFlipped] = useState(false);
-  function handleFlip(){
 
-  }
- 
-
+  const animationClass =
+    animationState === "flipX"
+      ? "animate-rotateX"
+      : animationState === "flipXOut"
+        ? "animate-rotateOutX"
+        : animationState === "flipY"
+          ? "animate-rotateY"
+          : "";
   const canClickLeft = useCaseNumber > 0;
   const canClickRight = useCaseNumber < USECASES.length - 1;
   return (
@@ -37,8 +42,8 @@ export function UseCase() {
           </p>
         </div>
         <div
-          className={`flex flex-col min-h-[70vh] w-3/4 relative justify-center rounded-3xl text-white py-6 ${isFlipped ? "animate-rotateX": 'animate-rotateOutX'}`}
-          key={`${USECASES[useCaseNumber]} ${isFlipped}`}
+          className={`flex flex-col min-h-[70vh] w-3/4 relative justify-center rounded-3xl text-white py-8 ${animationClass}`}
+          key={useCaseNumber}
           style={{
             backgroundImage: `linear-gradient(to bottom, transparent, black), url(${USECASES[useCaseNumber].img})`,
             backgroundSize: "cover",
@@ -51,20 +56,27 @@ export function UseCase() {
             onClick={() => {
               setUseCaseNumber(useCaseNumber - 1);
               isFlipped && setIsFlipped(false);
+              setAnimationState("flipY")
             }}
           >
             <ChevronLeft className="size-6 2xl:size-8" />
           </NavButton>
           <div
             className="flex flex-col px-[12%] h-full "
-            onClick={() =>
-              setIsFlipped(prev=>!prev)
-            }
+            onClick={() => {
+              setAnimationState(
+                animationState == "flipX" ? "flipXOut" : "flipX",
+              );
+              setIsFlipped((prev) => !prev);
+            }}
           >
             {isFlipped ? (
-              <div>
+              <div className="h-full">
+                <h2 className="flex min-h-24 justify-center items-center text-center font-notoserif font-bold  text-center uppercase">
+                  {USECASES[useCaseNumber].label}{" "}
+                </h2>
                 {Array.isArray(USECASES[useCaseNumber].content) ? (
-                  <div className="flex flex-col gap-8 pt-3">
+                  <div className="flex flex-col gap-8 pt-8">
                     {USECASES[useCaseNumber].content.map((item, index) => (
                       <div className="" key={item.subLabel}>
                         <h3>{item.subLabel}</h3>
@@ -98,6 +110,7 @@ export function UseCase() {
             onClick={() => {
               setUseCaseNumber(useCaseNumber + 1);
               isFlipped && setIsFlipped(false);
+              setAnimationState("flipY")
             }}
           >
             <ChevronRight className="size-6 2xl:size-8" />
