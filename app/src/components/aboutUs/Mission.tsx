@@ -22,9 +22,9 @@ export function Mission() {
       {/* className="flex w-[90vw] mx-auto" */}
       <div className="flex flex-col w-[90vw] mx-auto gap-y-[3vh] md:gap-y-0">
         <div className="flex flex-col ">
-          <div className="flex text-5xl font-notoserif h-[20vh] md:h-[30vh] items-center animate-slideInRight">
+          <h1 className="flex font-normal font-notoserif h-[20vh] md:h-[30vh] items-center animate-slideInRight">
             Our Mission, Vision & Philosophy
-          </div>
+          </h1>
           <div className="flex flex-col md:flex-row w-5/6 mx-auto my-11 justify-between gap-14">
             <div className="flex flex-col md:w-[33%]  hover:scale-[1.1] transition- duration-200">
               <p className="text-center text-4xl text-leaf font-semibold border-leaf border-b-2 mx-[20%] mb-[5%]">

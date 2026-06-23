@@ -40,11 +40,11 @@ export function HomeMain() {
           </div>
           <div className="mb-[15%] mt-[30%]">
             <div className="flex relative flex-row items-center gap-2 pb-10">
-              <h2>How Asagami AI Works</h2>
+              <h2 >How Asagami AI Works</h2>
               <Info className="inline text-gray-800" ref={customRef} />
-              <div className="flex items-center relative">
+              <div className="flex items-center">
                 {hovering && (
-                  <div className="absolute bg-[#c4c4c4]  font-sans rounded text-base p-2 w-40">
+                  <div className="absolute top-12 right-0 bg-[#c4c4c4] font-sans rounded text-base p-2 w-40">
                     Click on each feature to find out more!
                   </div>
                 )}

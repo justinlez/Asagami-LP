@@ -14,9 +14,13 @@ export function UseCase() {
       ? "animate-rotateX"
       : animationState === "flipXOut"
         ? "animate-rotateOutX"
-        : animationState === "flipY"
-          ? "animate-rotateY"
-          : "";
+        : animationState === "slideFromRight"
+          ? "animate-slideInRight"
+          : animationState === "slideFromLeft"
+            ? "animate-slideInLeft"
+            : animationState === "flipY"
+              ? "animate-rotateY"
+              : "";
   const canClickLeft = useCaseNumber > 0;
   const canClickRight = useCaseNumber < USECASES.length - 1;
   return (
@@ -30,7 +34,7 @@ export function UseCase() {
     >
       <div className="flex flex-col w-[90vw]  min-h-screen items-center justify-center">
         <div className="flex flex-col md:w-3/4 text-center py-[3vh] gap-y-3">
-          <h1 className="font-notoserif font-medium text-5xl 2xl:text-7xl:">
+          <h1 className="font-notoserif font-medium">
             Value for Every Organisation
           </h1>
           <p className="mx-auto w-5/6 text-[#8F8888]">
@@ -56,7 +60,7 @@ export function UseCase() {
             onClick={() => {
               setUseCaseNumber(useCaseNumber - 1);
               isFlipped && setIsFlipped(false);
-              setAnimationState("flipY");
+              setAnimationState("slideFromRight");
             }}
           >
             <ChevronLeft className="size-6 2xl:size-8" />
@@ -73,7 +77,7 @@ export function UseCase() {
             {isFlipped ? (
               <div className="h-full">
                 <h2 className="flex min-h-24 justify-center items-center text-center font-notoserif font-bold  text-center uppercase">
-                  {USECASES[useCaseNumber].label}{" "}
+                  {USECASES[useCaseNumber].label}
                 </h2>
                 {Array.isArray(USECASES[useCaseNumber].content) ? (
                   <div className="flex flex-col gap-8 pt-8">
@@ -92,7 +96,7 @@ export function UseCase() {
                     ))}
                   </div>
                 ) : (
-                  <div> kiv </div>
+                  <div> {USECASES[useCaseNumber].content} </div>
                 )}
               </div>
             ) : (
@@ -110,7 +114,7 @@ export function UseCase() {
             onClick={() => {
               setUseCaseNumber(useCaseNumber + 1);
               isFlipped && setIsFlipped(false);
-              setAnimationState("flipY");
+              setAnimationState("slideFromLeft");
             }}
           >
             <ChevronRight className="size-6 2xl:size-8" />

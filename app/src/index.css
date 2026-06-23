@@ -3,7 +3,7 @@
 @tailwind utilities;
 @layer base {
   h1 {
-    @apply text-4xl 2xl:text-7xl font-bold font-notojp;
+    @apply text-3xl md:text-4xl 2xl:text-7xl font-bold font-notojp;
   }
 
   h2 {

@@ -53,7 +53,17 @@ export default {
         slideInRight: {
           "0%": {
             opacity: "0",
-            transform: "translateX(180px)",
+            transform: "translateX(15%)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateX(0)",
+          },
+        },
+        slideInLeft: {
+          "0%": {
+            opacity: "0",
+            transform: "translateX(-15%)",
           },
           "100%": {
             opacity: "1",
@@ -102,6 +112,7 @@ export default {
       animation: {
         slideUp: "slideUp 0.8s ease-out forwards",
         slideInRight: "slideInRight 0.8s ease-out forwards",
+        slideInLeft: "slideInLeft 0.8s ease-out forwards",
         rotateX: "rotateX 1.2s ease-out forwards",
         rotateOutX: "rotateOutX 1.2s ease-out forwards",
         rotateY: "rotateY 1.2s ease-out forwards"
