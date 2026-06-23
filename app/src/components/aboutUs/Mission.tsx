@@ -26,7 +26,7 @@ export function Mission() {
             Our Mission, Vision & Philosophy
           </h1>
           <div className="flex flex-col md:flex-row w-5/6 mx-auto my-11 justify-between gap-14">
-            <div className="flex flex-col md:w-[33%]  hover:scale-[1.1] transition- duration-200">
+            <div className="flex flex-col items-center md:w-[33%]  hover:scale-[1.1] transition- duration-200">
               <p className="text-center text-4xl text-leaf font-semibold border-leaf border-b-2 mx-[20%] mb-[5%]">
                 Mission
               </p>
@@ -37,7 +37,7 @@ export function Mission() {
                 and judgment to the world through globally impactful software.
               </p>
             </div>
-            <div className="flex flex-col md:w-[33%] hover:scale-[1.1] transition- duration-200">
+            <div className="flex flex-col items-center md:w-[33%] hover:scale-[1.1] transition- duration-200">
               <p className="text-center text-4xl text-leaf font-semibold border-leaf border-b-2 mx-[20%] mb-[5%]">
                 Vision
               </p>
@@ -48,7 +48,7 @@ export function Mission() {
                 the future.
               </p>
             </div>
-            <div className="flex flex-col md:w-[33%] hover:scale-[1.1] transition- duration-200">
+            <div className="flex flex-col items-center md:w-[33%] hover:scale-[1.1] transition- duration-200">
               <p className="text-center text-4xl text-leaf font-semibold border-leaf border-b-2 mx-[20%] mb-[5%]">
                 Philosophy
               </p>
@@ -84,8 +84,8 @@ export function Mission() {
             </div>
           </div>
         </div>
-        <div className="flex w-full items-center h-[75vh]">
-          <div className="flex flex-col md:w-1/2 px-[6%] h-full justify-evenly text-center md:text-start">
+        <div className="flex w-full items-center min-h-[50vh]">
+          <div className="flex flex-col md:w-1/2 px-[6%] h-full gap-y-6 text-center md:text-start">
             <div>
               <h3>
                 <span className="text-leaf">01</span> A human-friendly AI

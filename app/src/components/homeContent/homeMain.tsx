@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import homepg from "@/assets/homepage screen.svg";
 import { useHover } from "@/lib/utils";
-import AboutUsBg from "@/assets/AboutUsBg.jpg";
+import AboutUsBg from "@/assets/AboutUsBg2.jpg";
 
 export function HomeMain() {
   const { customRef, hovering } = useHover();

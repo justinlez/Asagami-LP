@@ -17,7 +17,7 @@ export function Team() {
               className="flex flex-col md:flex-row border-b border-gray-300 pt-[2vh] pb-[0.5%]"
               key={item.label}
             >
-              <div className="flex md:flex-colflex-shrink-0 w-1/6 text-gray-600 font-[700] font-notoserif">
+              <div className="flex w-1/5 md:flex-col flex-shrink-0 w-1/6 text-gray-600 font-[700] font-notoserif">
                 {item.label}
               </div>
               {Array.isArray(item.value) ? (
@@ -43,7 +43,7 @@ export function Team() {
         <div className="flex flex-col md:flex-row justify-evenly">
           <div className="order-2 md:order-1">
             <div
-              className="rounded-t-xl relative h-[50vh] md:w-[22vw] bg-no-repeat bg-cover "
+              className="rounded-t-xl relative h-[50vh] lg:w-[22vw] bg-no-repeat bg-cover "
               style={{
                 backgroundImage: `url(${Dai})`,
                 backgroundPosition: "center",
@@ -64,7 +64,7 @@ export function Team() {
           </div>
           <div className="order-1 md:order-2">
             <div
-              className="rounded-t-xl relative h-[50vh] md:w-[22vw] bg-no-repeat bg-cover"
+              className="rounded-t-xl relative h-[50vh] lg:w-[22vw] bg-no-repeat bg-cover"
               style={{
                 backgroundImage: `url(${Masa})`,
                 backgroundPosition: "center",
@@ -86,7 +86,7 @@ export function Team() {
           </div>
           <div className="order-3">
             <div
-              className="rounded-t-xl relative h-[50vh] md:w-[22vw] bg-no-repeat bg-cover"
+              className="rounded-t-xl relative h-[50vh] lg:w-[22vw] bg-no-repeat bg-cover"
               style={{
                 backgroundImage: `url(${Takeshi})`,
                 backgroundPosition: "center",
