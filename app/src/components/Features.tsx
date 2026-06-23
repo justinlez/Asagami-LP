@@ -35,15 +35,15 @@ export function Features() {
       <div className="flex flex-col w-[90vw] justify-center mx-auto bg-contain">
         <div className="flex justify-center items-center h-[20vh]">
           {feature ? (
-            <div className="flex h-full items-center gap-x-[1vw] font-normal text-5xl 2xl:text-7xl font-notoserif relative">
-              {feature.name}{" "}
+            <div className="flex relative h-full items-center gap-x-[1vw] font-normal text-5xl 2xl:text-7xl font-notoserif text-center">
+              {feature.name}
               <Info
                 className="inline text-gray-800 2xl:size-8"
                 ref={customRef}
               />
               <div className="flex items-center">
                 {hovering && (
-                  <div className="absolute bg-[#c4c4c4] bg-opacity-70 z-20 font-normal font-sans rounded text-base p-[3%] w-40">
+                  <div className="absolute right-0 top-32 bg-[#c4c4c4] bg-opacity-80 z-20 font-normal font-sans rounded text-base p-[1%] w-40">
                     {INFOTOOLTIPCONTENT}
                   </div>
                 )}

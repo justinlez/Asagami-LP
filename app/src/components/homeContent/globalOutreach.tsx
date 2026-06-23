@@ -13,15 +13,15 @@ export function GlobalOutreach() {
       </div>
       <div
         style={{ backgroundImage: `url(${MapBackground})` }}
-        className="flex flex-col items-center justify-center bg-cover bg-center bg-no-repeat h-[70vh] mb-[10vh]"
+        className="flex flex-col items-center justify-center bg-cover bg-center bg-no-repeat h-[40vh] md:h-[70vh] mb-[10vh]"
       >
-        <div className="flex flex-row gap-x-[3%] justify-center w-3/4">
+        <div className="flex flex-wrap gap-y-[20%] gap-x-[4%] justify-center w-3/4">
           {COUNTRIES.map((country) => (
             <div className="relative" key={country.name}>
               <img
                 src={country.flag}
                 alt={country.name}
-                className={`h-[20vh] block ${hoveredCountry === country.name ? "scale-125" : "scale-100"}`}
+                className={`h-[10vh] md:h-[20vh] block ${hoveredCountry === country.name ? "scale-125" : "scale-100"}`}
                 onMouseEnter={() => setHoveredCountry(country.name)}
                 onMouseLeave={() => setHoveredCountry(null)}
               />

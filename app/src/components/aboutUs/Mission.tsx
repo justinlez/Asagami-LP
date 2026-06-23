@@ -20,13 +20,13 @@ export function Mission() {
       style={{ backgroundImage: `url(${AboutUsBg})` }}
     >
       {/* className="flex w-[90vw] mx-auto" */}
-      <div className="flex flex-col w-[90vw] mx-auto">
+      <div className="flex flex-col w-[90vw] mx-auto gap-y-[3vh] md:gap-y-0">
         <div className="flex flex-col ">
-          <div className="flex text-5xl font-notoserif h-[30vh] items-center animate-slideInRight">
+          <div className="flex text-5xl font-notoserif h-[20vh] md:h-[30vh] items-center animate-slideInRight">
             Our Mission, Vision & Philosophy
           </div>
-          <div className="flex w-5/6 mx-auto mt-[3%] justify-between gap-[4%]">
-            <div className="flex flex-col w-[33%]  hover:scale-[1.1] transition- duration-200">
+          <div className="flex flex-col md:flex-row w-5/6 mx-auto my-11 justify-between gap-14">
+            <div className="flex flex-col md:w-[33%]  hover:scale-[1.1] transition- duration-200">
               <p className="text-center text-4xl text-leaf font-semibold border-leaf border-b-2 mx-[20%] mb-[5%]">
                 Mission
               </p>
@@ -37,7 +37,7 @@ export function Mission() {
                 and judgment to the world through globally impactful software.
               </p>
             </div>
-            <div className="flex flex-col w-[33%] hover:scale-[1.1] transition- duration-200">
+            <div className="flex flex-col md:w-[33%] hover:scale-[1.1] transition- duration-200">
               <p className="text-center text-4xl text-leaf font-semibold border-leaf border-b-2 mx-[20%] mb-[5%]">
                 Vision
               </p>
@@ -48,7 +48,7 @@ export function Mission() {
                 the future.
               </p>
             </div>
-            <div className="flex flex-col w-[33%] hover:scale-[1.1] transition- duration-200">
+            <div className="flex flex-col md:w-[33%] hover:scale-[1.1] transition- duration-200">
               <p className="text-center text-4xl text-leaf font-semibold border-leaf border-b-2 mx-[20%] mb-[5%]">
                 Philosophy
               </p>
@@ -62,10 +62,10 @@ export function Mission() {
           </div>
         </div>
         <div className="flex w-full items-center">
-          <div className="flex flex-col w-1/2">
+          <div className="hidden md:flex flex-col w-1/2">
             <img src={handsome1} alt="" />
           </div>
-          <div className="flex flex-col w-1/2">
+          <div className="flex flex-col md:w-1/2 text-center md:text-start">
             <div className="flex flex-col gap-y-[3vh]">
               <h2 className="text-[#331B3B]">Our Philosophy</h2>
               <p className="text-lg 2xl:text-3xl font-notoserif pb-6">
@@ -85,7 +85,7 @@ export function Mission() {
           </div>
         </div>
         <div className="flex w-full items-center h-[75vh]">
-          <div className="flex flex-col w-1/2 px-[6%] h-full justify-evenly">
+          <div className="flex flex-col md:w-1/2 px-[6%] h-full justify-evenly text-center md:text-start">
             <div>
               <h3>
                 <span className="text-leaf">01</span> A human-friendly AI
@@ -120,15 +120,15 @@ export function Mission() {
               </p>
             </div>
           </div>
-          <div className="flex flex-col w-1/2 items-center">
+          <div className="hidden md:flex flex-col w-1/2 items-center">
             <img src={handsome2} alt="" width={"75%"} />
           </div>
         </div>
         <div className="flex w-full items-center">
-          <div className="flex flex-col w-1/2 pe-10">
+          <div className="hidden md:flex flex-col w-1/2 pe-10">
             <img src={handsome3} alt="" />
           </div>
-          <div className="flex flex-col w-1/2 gap-y-[3vh]">
+          <div className="flex flex-col md:w-1/2 gap-y-[3vh] px-[6%] text-center md:text-start">
             <h2 className="font-notoserif">
               Empowering Human Understanding, Judgement, and Action
             </h2>
@@ -145,8 +145,8 @@ export function Mission() {
             </p>
           </div>
         </div>
-        <div className="flex w-full my-24">
-          <div className="flex flex-col w-1/3 gap-[1vh] px-[3vw] items-center text-center">
+        <div className="flex flex-col md:flex-row w-full my-[7%]">
+          <div className="flex flex-col md:w-1/3  gap-[1vh] px-[3vw] py-3 items-center text-center">
             <h3 className="flex items-center gap-[1vw]">
               <BookText className="text-leaf stroke-1 size-8 2xl:size-14" />
               <span className="font-space uppercase">Think</span>{" "}
@@ -156,7 +156,7 @@ export function Mission() {
               into clear, meaningful insights.
             </p>
           </div>
-          <div className="flex flex-col w-1/3 gap-[1vh] px-[3vw] items-center text-center border-x-2 border-gray-300">
+          <div className="flex flex-col md:w-1/3 gap-[1vh] px-[3vw] py-3 items-center text-center border-y-2 md:border-y-0 md:border-x-2 border-gray-300">
             <h3 className="flex items-center gap-[1vw]">
               <Gavel className="text-leaf stroke-1 size-8 2xl:size-14" />
               <span className="font-space uppercase">Decide</span>{" "}
@@ -166,7 +166,7 @@ export function Mission() {
               values, and responsibility remain with the individual.
             </p>
           </div>
-          <div className="flex flex-col w-1/3 gap-[1vh] px-[3vw] items-center text-center">
+          <div className="flex flex-col md:w-1/3 gap-[1vh] px-[3vw] py-3 items-center text-center">
             <h3 className="flex items-center gap-[1vw]">
               <Brain className="text-leaf stroke-1 size-8 2xl:size-14" />
               <span className="font-space uppercase">Act</span>{" "}

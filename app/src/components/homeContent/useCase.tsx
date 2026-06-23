@@ -29,7 +29,7 @@ export function UseCase() {
       }}
     >
       <div className="flex flex-col w-[90vw]  min-h-screen items-center justify-center">
-        <div className="flex flex-col w-3/4 text-center py-[3vh] gap-y-3">
+        <div className="flex flex-col md:w-3/4 text-center py-[3vh] gap-y-3">
           <h1 className="font-notoserif font-medium text-5xl 2xl:text-7xl:">
             Value for Every Organisation
           </h1>
@@ -42,7 +42,7 @@ export function UseCase() {
           </p>
         </div>
         <div
-          className={`flex flex-col min-h-[70vh] w-3/4 relative justify-center rounded-3xl text-white py-8 ${animationClass}`}
+          className={`flex flex-col min-h-[70vh] w-5/6 md:w-3/4 relative justify-center rounded-3xl text-white py-8 ${animationClass}`}
           key={useCaseNumber}
           style={{
             backgroundImage: `linear-gradient(to bottom, transparent, black), url(${USECASES[useCaseNumber].img})`,

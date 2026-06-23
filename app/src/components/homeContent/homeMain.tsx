@@ -21,8 +21,8 @@ export function HomeMain() {
       style={{ backgroundImage: `url(${AboutUsBg})` }}
     >
       <div className="flex flex-row w-[90vw] mx-auto gap-[1%]">
-        <div className="flex flex-col w-[40%] z-20">
-          <div className="flex flex-col min-h-[90vh] justify-center animate-slideInRight">
+        <div className="flex flex-col md:w-[40%] z-20">
+          <div className="flex flex-col min-h-[50vh] md:min-h-[90vh] justify-center animate-slideInRight">
             <h1>Transform Knowledge Into Personalized Learning</h1>
             <br />
             <div className="text-lg 2xl:text-2xl font-space pb-6">
@@ -127,7 +127,7 @@ export function HomeMain() {
           </div>
         </div>
         {/* RIGHT COLUMN — sticky image */}
-        <div className="flex flex-col w-auto mx-auto pb-[4%]">
+        <div className="hidden md:flex flex-col w-auto mx-auto pb-[4%]">
           <div className="sticky top-[20%] flex justify-center">
             <img src={homepg} alt="" className="h-[70vh] w-auto" />
           </div>
