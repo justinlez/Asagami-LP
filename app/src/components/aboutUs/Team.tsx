@@ -50,9 +50,9 @@ export function Team() {
               <h3>Dai Deguchi</h3>
               <p className="text-[#6236F5] pb-2">Co-Founder, Finance Lead</p>
               <p className="flex gap-[5%] text-gray-400">
-                <Facebook />
+                <Facebook className="hover:text-blue-500 hover:scale-[1.3] hover:border hover:rounded"/>
                 <Link to='https://www.linkedin.com/in/daideguchi/'>
-                    <Linkedin />
+                    <Linkedin className="hover:text-blue-500 hover:scale-[1.3] hover:border hover:rounded"/>
                 </Link>
               </p>
             </div>
@@ -69,9 +69,9 @@ export function Team() {
               <h3>Masatoshi Sonoda</h3>
               <p className="text-[#6236F5] pb-2">Founder, CEO</p>
               <p className="flex gap-[5%] text-gray-400">
-                <Facebook />
+                <Facebook className="hover:text-blue-500 hover:scale-[1.3] hover:border hover:rounded"/>
                 <Link to='https://www.linkedin.com/in/masatoshi-sonoda-eletus/' target="_blank">
-                    <Linkedin />
+                    <Linkedin className="hover:text-blue-500 hover:scale-[1.3] hover:border hover:rounded"/>
                 </Link>
               </p>
             </div>
@@ -88,8 +88,8 @@ export function Team() {
               <h3>Harada Takeshi</h3>
               <p className="text-[#6236F5] pb-2">Chief Technology Officer</p>
               <p className="flex gap-[5%] text-gray-400">
-                <Facebook />
-                <Linkedin />
+                <Facebook className="hover:text-blue-500 hover:scale-[1.3] hover:border hover:rounded"/>
+                <Linkedin className="hover:text-blue-500 hover:scale-[1.3] hover:border hover:rounded"/>
               </p>
             </div>
           </div>

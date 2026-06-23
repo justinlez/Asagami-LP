@@ -30,7 +30,7 @@ export function UseCase() {
     >
       <div className="flex flex-col w-[90vw]  min-h-screen items-center justify-center">
         <div className="flex flex-col w-3/4 text-center py-[3vh] gap-y-3">
-          <h1 className="font-notoserif font-medium">
+          <h1 className="font-notoserif font-medium text-5xl 2xl:text-7xl:">
             Value for Every Organisation
           </h1>
           <p className="mx-auto w-5/6 text-[#8F8888]">
@@ -56,7 +56,7 @@ export function UseCase() {
             onClick={() => {
               setUseCaseNumber(useCaseNumber - 1);
               isFlipped && setIsFlipped(false);
-              setAnimationState("flipY")
+              setAnimationState("flipY");
             }}
           >
             <ChevronLeft className="size-6 2xl:size-8" />
@@ -110,7 +110,7 @@ export function UseCase() {
             onClick={() => {
               setUseCaseNumber(useCaseNumber + 1);
               isFlipped && setIsFlipped(false);
-              setAnimationState("flipY")
+              setAnimationState("flipY");
             }}
           >
             <ChevronRight className="size-6 2xl:size-8" />
