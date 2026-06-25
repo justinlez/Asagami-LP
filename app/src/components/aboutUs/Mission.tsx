@@ -16,7 +16,7 @@ import handsome2 from "@/assets/aboutus/handsome3.svg";
 export function Mission() {
   return (
     <div
-      className={`flex flex-col min-h-screen bg-contain bg-no-repet`}
+      className={`flex flex-col min-h-screen bg-contain overflow-hidden`}
       style={{ backgroundImage: `url(${AboutUsBg})` }}
     >
       {/* className="flex w-[90vw] mx-auto" */}

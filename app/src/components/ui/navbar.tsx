@@ -39,7 +39,7 @@ export function Navbar() {
             )}
           </NavButton>
           {whichMenuExpanded === 'about' && (
-            <div className="absolute flex justify-center border top-full right-0 bg-white bg-opacity-90 rounded-xl  mt-1 ">
+            <div className="absolute z-30 flex justify-center border top-full right-0 bg-white bg-opacity-90 rounded-xl  mt-1 ">
               <ul className="whitespace-nowrap min-w-28">
                 <Link to="/aboutasagami/mission" onClick={()=>setWhichMenuExpanded(whichMenuExpanded === 'about' ? null : 'about')}>
                   <li className="hover:bg-turqoise hover:text-white px-3 py-[5%] rounded-lg "> Mission & Vision </li>
@@ -67,7 +67,7 @@ export function Navbar() {
           </NavButton>
 
           {whichMenuExpanded ==='Language' && (
-            <div className="absolute flex justify-center border top-full right-0 bg-white bg-opacity-90 rounded-xl mt-1 ">
+            <div className="absolute z-30 flex justify-center border top-full right-0 bg-white bg-opacity-90 rounded-xl mt-1 ">
               <ul className="whitespace-nowrap min-w-28">
                 <Link
                   to="/"
