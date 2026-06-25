@@ -113,15 +113,24 @@ export function UseCase() {
               <ChevronLeft className="size-6 2xl:size-8" />
             </NavButton>
             <div
-              className="flex flex-col flex-1 justify-center px-[12%]"
+              className="relative flex flex-col flex-1 justify-center px-[12%]"
               onClick={() => {
-                setAnimationState(
-                  animationState == "flipX" ? "flipXOut" : "flipX",
-                );
                 setIsFlipped((prev) => !prev);
               }}
             >
-              {isFlipped ? (
+              <h1
+                className={`flex h-full items-center justify-center py-3 text-center font-notoserif font-bold uppercase 2xl:py-10 transition-opacity duration-500 ease-in-out ${
+                  isFlipped ? "pointer-events-none opacity-0" : "opacity-100"
+                }`}
+                style={{ textShadow: "0px 4px 4px rgba(0, 0, 0, 0.5)" }}
+              >
+                {activeUseCase.label}
+              </h1>
+              <div
+                className={`absolute inset-0 flex flex-col justify-center px-[12%] transition-opacity duration-500 ease-in-out ${
+                  isFlipped ? "opacity-100" : "pointer-events-none opacity-0"
+                }`}
+              >
                 <div className="h-full">
                   <h2 className="flex min-h-16 items-center justify-center text-center font-notoserif font-bold uppercase">
                     {activeUseCase.label}
@@ -148,14 +157,7 @@ export function UseCase() {
                     <div>{activeUseCase.content}</div>
                   )}
                 </div>
-              ) : (
-                <h1
-                  className="flex h-full items-center justify-center py-3 text-center font-notoserif font-bold uppercase 2xl:py-10"
-                  style={{ textShadow: "0px 4px 4px rgba(0, 0, 0, 0.5)" }}
-                >
-                  {activeUseCase.label}
-                </h1>
-              )}
+              </div>
             </div>
             <NavButton
               className="absolute right-[3%] z-40 h-10 rounded-full p-2 2xl:p-1 disabled:text-gray-400 disabled:hover:bg-transparent"
