@@ -52,7 +52,7 @@ export function UseCase() {
 
   return (
     <div
-      className="flex w-full justify-center"
+      className="flex w-full justify-center py-[5%] overflow-hidden"
       style={{
         backgroundImage: `url(${AboutUsBg2})`,
         backgroundSize: "contain",
