@@ -101,6 +101,7 @@ export function Features() {
                 />
               ) : (
                 <video
+                className="rounded-xl"
                   width=""
                   autoPlay
                   loop
