@@ -27,7 +27,7 @@ export function HomeMain() {
             <br />
             <div className="text-lg 2xl:text-2xl font-space pb-6">
               Asagami converts notes, SOPs, videos, manuals, and teaching
-              materials into structured learning, adaptive quizzes, AI-supported
+              materials into structured learning notes, adaptive quizzes, AI-supported
               revision, and real-time learning insights.
             </div>
             <div>
